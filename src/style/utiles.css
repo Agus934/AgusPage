@@ -147,10 +147,10 @@
 }
   
 .form-container .form-input {
-    flex-grow: 1;
-    flex-shrink: 1;
-    min-width: 20%;
-    margin: 0 5px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 20%;
+  margin: 0 5px;
 }
     
 .form-container .form-input .form-control {
@@ -165,7 +165,7 @@
 
 .form-container .form-input .form-control::placeholder{ 
   font-family: var(--font-normal);
-  font-size: 1.2rem; 
+  font-size: inherit; 
 }
 
 .form-container .form-input .fm_lb{
@@ -175,7 +175,7 @@
 }
 
 .form-container .form-input .fm_tx{ 
-  min-height: 10px;
+  min-height: 150px;
   resize: vertical;
 }
     
@@ -188,20 +188,13 @@
   border: 2px solid var(--primary-color);
   box-shadow: 0 0 2px 1px var(--primary-color)
 }
+
 .form-container .form-input .fm_btn * {
   color: var(--dark-color);
 }
 
-
 .form-container .form-input .input-info {
   font-size: 1rem;
-}
-
-.form-container .form-input .invalid-feedback {
-  display: none;
-}
-.form-container .form-input .is-invalid {
-  display: block;
 }
 
 .form-container .form-input .fm_btn:active{
@@ -218,4 +211,3 @@
 .form-container .form-input .is-invalid:focus{
   box-shadow: 0 0 4px 1px #ec4f4f;
 }
-  
