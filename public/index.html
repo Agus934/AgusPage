@@ -2,42 +2,84 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta 
+      name="description" 
+      content="Obtené una atención rápida y eficiente, con un asesoramiento integral en materia de seguros."
+    >
+    <meta 
+    name="keywords" 
+    content="seguros, agustinagordilloseguros, agustina gordillo, argentina, cordoba, autos, motos, monopatin, hogar, vida, bicicletas, integral de comercio, caucion, accidentes personales, praxis medica, fuerzas especiales, promotora de seguros"
+    >
+    <meta name="theme-color" content="#fcfcfc">
+    <meta name="color-scheme" content="normal">
+    <meta name="author" content="Axel Ariel Saravia">
+    <meta name="creator" content="axarisar"> 
+    <meta name="ranting" content="general">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- MANIFEST -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+
+    <meta name="canonical" href="https://agustinagordilloseguros.com/">
+    
+    <!--  SOCIAL MEDIA meta tags -->
+    <meta property="og:title" content="Agustina Gordillo Seguros">
+    <meta property="og:description" content="Asesoramiento integral en seguros">
+    <meta property="og:type" content="profile"/>
+    <meta property="og:url" content="https://agustinagordilloseguros.com/">
+    <meta property="og:image" content="%PUBLIC_URL%/logo192.png"></meta>
+    <meta property="og:image:secure_url" content="%PUBLIC_URL%/logo192.png" />
+    <meta property="og:image:alt" content="Logo AGS">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!--  Title and Icon-->
+    <title>Agustina Gordillo Seguros</title>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- Preload images -->
+ <!--    <link rel=preload href="./assets/images/hero-logo.svg" as=image media="(width: 600px)">
+
+    <link rel="preload" href="./assets/images/icons-and-backgrounds/ssn-img.png" as=image media="(width: 300px)">
+    <link rel="preload" href="./assets/images/icons-and-backgrounds/whatapp-icon-white.svg" as=image media="(width: 60px)">
+    <link rel="preload" href="./assets/images/icons-and-backgrounds/whatapp-icon.svg" as=image media="(width: 170px)">
+    <link rel="preload" href="./assets/images/icons-and-backgrounds/facebook-icon.svg" as=image media="(width: 170px)">
+    <link rel="preload" href="./assets/images/icons-and-backgrounds/instagram-icon.svg" as=image media="(width: 170px)">
+    <link rel="preload" href="./assets/images/icons-and-backgrounds/mail-icon.svg" as=image media="(width: 30px)">
+    
+    <link rel="preload" href="./assets/images/icons-and-backgrounds/cotiza-icon.svg" as=image media="(width: 400px)">
+    <link rel="preload" href="./assets/images/icons-and-backgrounds/coberturas-icon.svg" as=image media="(width: 400px)">
+
+    <link rel=preload href="./assets/images/coberturas/accidentes.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/autos.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/bicicleta.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/hogar.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/motos.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/vida.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/caucion.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/fuerzas-especiales.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/integral-de-comercio.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/monopatin.jpg" as=image media="(max-width: 320px)">
+    <link rel=preload href="./assets/images/coberturas/praxis-medica.jpg" as=image media="(max-width: 320px)"> -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+      integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l"
+      crossorigin="anonymous"
+    >
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="root">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    </div>
   </body>
 </html>

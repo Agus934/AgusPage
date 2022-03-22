@@ -1,14 +1,30 @@
 {
-  "name": "my-app",
+  "name": "agustina-gordillo-seguros",
   "version": "0.1.0",
   "private": true,
+  "author": "axarisar",
+  "description": "single page",
+  "keywords": [
+    "seguros",
+    "page",
+    "webpack",
+    "single",
+    "page"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agus934/AgusPage.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.1.3",
+    "normalize.css": "^8.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
+    "sass": "^1.49.9",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

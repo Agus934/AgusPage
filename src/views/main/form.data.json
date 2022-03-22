@@ -1,0 +1,283 @@
+{
+  "General": {
+    "notFormatter": true,
+    "rows": [
+      {
+        "Nombres": {
+          "placeholder": "ej: Agustina",
+          "name": "nombre",
+          "type": "text",
+          "required": "default"
+        },
+        "Appellidos": {
+          "placeholder": "ej: Gordillo",
+          "name": "apellido",
+          "type": "text",
+          "required": "default"
+        }
+      },
+      {
+        "DNI": {
+          "placeholder": "ej: 32898900",
+          "name": "dni",
+          "type": "tel",
+          "column": 1,
+          "required": "default"
+        },
+        "Codigo Postal": {
+          "placeholder": "ej: 1401",
+          "name": "codigo_postal",
+          "type": "text",
+          "required": "default"
+        }
+      },
+      {
+        "Teléfono": {
+          "placeholder": "ej: 351 0040352",
+          "name": "tel",
+          "type": "tel",
+          "required": "Teléfono invalido. Sólo se acepta el código de area más el número"
+        },
+        "Email": {
+          "placeholder": "ej: mi.email@gmail.com",
+          "name": "email",
+          "type": "email",
+          "required": "Email invalido"
+        }
+      },
+      {
+        "Comentarios": {
+          "placeholder": "Aqui puede agregar algo más de información si lo necesita",
+          "name": "comentario",
+          "type": "textarea",
+          "required": false
+        }
+      }
+    ]
+  },
+  "Autos": {
+    "rows": [
+      {
+        "Marca": {
+          "placeholder": "ej: CHEVROLET",
+          "name": "marca",
+          "type": "text",
+          "required": "default",
+          "info": "está especificada como MARCA en la Cédula de Identificación de los Automotores"
+        },
+        "Año": {
+          "placeholder": "De 1986 al actual",
+          "name": "año",
+          "type": "number",
+          "min": "1986",
+          "required": "Año invalido"
+        }
+      },
+      {
+        "Modelo": {
+          "placeholder": "ej: CORSA CLASSIC 1.6 5P LS",
+          "name": "modelo",
+          "type": "text",
+          "required": "default",
+          "info": "está especificada como MODELO en la Cédula de Identificación de los Automotores"
+        },
+        "GNC": {
+          "name": "gnc",
+          "type": "select",
+          "option": [
+            {
+              "text": "SI",
+              "value": "SI"
+            },
+            {
+              "text": "NO",
+              "value": "NO",
+              "selected": true
+            }
+          ],
+          "required": false
+        }
+      }
+    ],
+    "import": "General"
+  },
+  "Motos": {
+    "rows": [
+      {
+        "Marca": {
+          "placeholder": "ej: YAMAHA",
+          "name": "marca",
+          "type": "text",
+          "required": "default",
+          "info": "está especificada como MARCA en la Cédula de Identificación de los Motovehículos"
+        },
+        "Año": {
+          "placeholder": "De 1986 al actual",
+          "name": "año",
+          "type": "number",
+          "min": "1986",
+          "required": "Año invalido"
+        },
+        "Modelo": {
+          "placeholder": "ej: 700 MT 07 TRACER",
+          "name": "modelo",
+          "type": "text",
+          "required": "default",
+          "info": "está especificada como MODELO en la Cédula de Identificación de los Motovehículos"
+        }
+      }
+    ],
+    "import": "General"
+  },
+  "Bicicletas": {
+    "rows": [
+      {
+        "Marca": {
+          "placeholder": "ej: RALEIGH",
+          "name": "marca",
+          "type": "text",
+          "required": "default"
+        },
+        "Año": {
+          "placeholder": "De 2016 al actual",
+          "name": "año",
+          "type": "number",
+          "min": "2016",
+          "required": "Año invalido"
+        }
+      },
+      {
+        "Versión": {
+          "placeholder": "ej: Mojave 2.0 R29",
+          "name": "version",
+          "type": "text",
+          "required": "default"
+        },
+        "Rodado": {
+          "placeholder": "ej: 29",
+          "name": "rodado",
+          "type": "number",
+          "min": "12",
+          "max": "32",
+          "required": "default"
+        }
+      },
+      {
+        "Material del Cuadro": {
+          "placeholder": "ej: ALUMINIO",
+          "name": "cuadro",
+          "type": "text",
+          "required": "default"
+        },
+        "Color": {
+          "placeholder": "ej: Negro con Naranja",
+          "name": "color",
+          "type": "text",
+          "required": "default"
+        }
+      }
+    ],
+    "import": "General"
+  },
+  "Monopatín": {
+    "rows": [
+      {
+        "Marca": {
+          "placeholder": "ej: SCOOTER",
+          "name": "marca",
+          "type": "text",
+          "required": "default"
+        },
+        "Año": {
+          "placeholder": "De 2016 al actual",
+          "name": "año",
+          "type": "number",
+          "min": "2016",
+          "required": "Año invalido"
+        }
+      },
+      {
+        "Tipo": {
+          "name": "tipo",
+          "type": "select",
+          "option": [
+            {
+              "text": "batería",
+              "value": "a batería",
+              "selected": true
+            },
+            {
+              "text": "eléctrico",
+              "value": "eléctrico"
+            }
+          ],
+          "required": false
+        },
+        "Color": {
+          "placeholder": "ej: Negro",
+          "name": "color",
+          "type": "text",
+          "required": "default"
+        }
+      }
+    ],
+    "import": "General"
+  },
+  "Hogar": {
+    "rows": [
+      {
+        "Metros cuadraros": {
+          "placeholder": "ej: 80",
+          "name": "metros_cuadrados",
+          "type": "number",
+          "required": "default"
+        },
+        "Material de construcción": {
+          "placeholder": "ej: Ladrillo visto",
+          "name": "material_de_construcción",
+          "type": "text",
+          "required": "default"
+        }
+      }
+    ],
+    "import": "General"
+  },
+  "Otros": {
+    "rows": [
+      {
+        "Seguro": {
+          "name": "seguro",
+          "type": "select",
+          "option": [
+            {
+              "text": "Vida",
+              "value": "Vida"
+            },
+            {
+              "text": "Integral de comercio",
+              "value": "Integral de comercio"
+            },
+            {
+              "text": "Caución",
+              "value": "Caución"
+            },
+            {
+              "text": "Accidentes personales",
+              "value": "Accidentes personales"
+            },
+            {
+              "text": "Praxis médica",
+              "value": "Praxis médica"
+            },
+            {
+              "text": "Fuerzas especiales",
+              "value": "Fuerzas especiales"
+            }
+          ],
+          "required": "default"
+        }
+      }
+    ],
+    "import": "General"
+  }
+}

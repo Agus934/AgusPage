@@ -1,0 +1,119 @@
+
+.inicio{
+  min-height: 70vh;
+
+  background-image: url("../../img/Wave-Line.svg");
+
+  background-size: 120% 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .leftColumn{
+    width: 100%;
+    padding: 10px;
+
+    justify-content: center;
+    align-items: center;
+    
+    .inicio-img {
+        max-width: 600px;
+        width: 100%;
+        
+
+        padding: 0;
+        margin: 0;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+/*---------------------------------------
+RIGHT COLUMN          
+-----------------------------------------*/
+  .rightColumn{
+    width: 100%;
+    justify-content: center;
+    text-align: justify;
+
+    .inicio-title {
+      font-family: var(--font-bold);
+      font-size: 3.5rem;
+      letter-spacing: 2.5px;
+      text-align: left;
+
+      margin-bottom: 20px;
+    }
+
+    .inicio-subtitle {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      font-style: italic;
+      text-align: justify;
+    } 
+  }
+}
+
+
+@media screen and (max-width: 980px) {
+
+  /*---------------------------------------
+      SECTION 1         
+  -----------------------------------------*/
+
+  .inicio{
+    align-items: center;
+    
+      /*---------------------------------------
+          LEFT COLUMN          
+      -----------------------------------------*/
+    .leftColumn{
+      padding: 10px 10px 10px;
+      align-items: center;
+      order: 2;
+
+      .inicio-image{
+        max-width: 700px;
+        width: 100%;
+        
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+      /*---------------------------------------
+          RIGHT COLUMN          
+      -----------------------------------------*/
+    .rightColumn{
+      padding: 20px 20px 10px;
+      order: 1;
+
+      align-items: center;
+      justify-content: center;
+
+        
+      .inicio-title { text-align: center; }
+      .inicio-subtitle { text-align: center; }
+    }
+  }
+}
+
+@media screen and (max-width: 660px) { 
+  .inicio{
+      /*---------------------------------------
+          RIGHT COLUMN          
+      -----------------------------------------*/
+    .rightColumn{
+        
+      .inicio-title { 
+        font-size: 2.5rem;
+        letter-spacing: 1.5px;
+      }
+      .inicio-subtitle { 
+        font-size: 2rem;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
