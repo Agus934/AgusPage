@@ -61,7 +61,8 @@
       }
     ]
   },
-  "Autos": {
+  "autos": {
+    "name": "Autos",
     "rows": [
       {
         "Marca": {
@@ -111,7 +112,8 @@
     ],
     "import": "General"
   },
-  "Motos": {
+  "motos": {
+    "name": "Motos",
     "rows": [
       {
         "Marca": {
@@ -142,7 +144,8 @@
     ],
     "import": "General"
   },
-  "Bicicletas": {
+  "bicicletas": {
+    "name": "Bicicletas",
     "rows": [
       {
         "Marca": {
@@ -198,7 +201,8 @@
     ],
     "import": "General"
   },
-  "Monopatín": {
+  "monopatin": {
+    "name": "Monopatín",
     "rows": [
       {
         "Marca": {
@@ -246,7 +250,8 @@
     ],
     "import": "General"
   },
-  "Hogar": {
+  "hogar": {
+    "name": "Hogar",
     "rows": [
       {
         "Metros cuadraros": {
@@ -267,7 +272,8 @@
     ],
     "import": "General"
   },
-  "Otros": {
+  "otros": {
+    "name": "Otros",
     "rows": [
       {
         "Seguro": {

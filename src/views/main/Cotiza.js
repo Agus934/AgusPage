@@ -59,7 +59,7 @@ function CotizaButton(props) {
       onClick={props.handleClick}
       value={props.name}
     >
-      <h4 className="fs-text">{props.name}</h4>
+      <h4 className="fs-text">{props.text}</h4>
     </button>
   );
 }
@@ -68,6 +68,7 @@ function CotizaButton(props) {
 function CreateCotizaBody(props) {
   const [formClick, setFormClick] = useState(formNames[0]);
   const [animation, setAnimation] = useState("");
+
 
   const handleClick = (e) => {
     setAnimation("animation");
@@ -81,9 +82,15 @@ function CreateCotizaBody(props) {
   return (
     <>
       <div className="cotiza-btns flex-row flex-wrap justify-sa">
-        {props.formNames.map(name => (
-          <CotizaButton key={name + "-button"} selected={name === formClick? true : false} name={name} handleClick={handleClick}/>
-        ))}  
+        {props.formNames.map(name => {
+          return ( 
+          <CotizaButton key={name + "-button"} 
+            selected={name === formClick? true : false} 
+            name={name}
+            text={props.data[name].name}
+            handleClick={handleClick}
+          />
+        )})}  
       </div>
       <div id="cotiza-forms" className="cotiza-forms">
         {animation !== "animation"

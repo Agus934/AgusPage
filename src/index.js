@@ -18,7 +18,6 @@ ReactDOM.render(
         <Route path="/">
           <Route index element={<App/>}/>
           {formNames.map(form => {
-            console.log(form)
             return <Route key={form + "-id"} path={form} element={<RouteElement formName={form}/>}/>
           })}
           <Route path="*" element={<NoPage/>} />
