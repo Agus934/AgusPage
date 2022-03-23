@@ -21,6 +21,24 @@ $padding: 20px;
 .ham-btn {
     display: none;
 }
+.inicioButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1000;
+
+    box-shadow: 0 0 10px 1px var($bg-icons);
+    background-color: $bg-icons; 
+    border-radius: 5px;
+    .goToInicio {
+        font-size: 20px;
+        padding: 5px;
+        font-family: var(--font-bold);
+        color: var(--secondary-color);
+    }
+}
 
 /* ICON brand */
 .icon-brand {
@@ -35,7 +53,7 @@ $padding: 20px;
 }
 
 /* Nav  */
-.navbar {
+.nav-container {
     position: relative;
     justify-content: flex-end;
     
@@ -79,7 +97,7 @@ $padding: 20px;
 @media(hover: hover) and (pointer: fine) {
     
     /* Nav  */
-    .navbar {
+    .nav-container {
         .nav-cont{
             .nav-link:hover{
                 outline: 1px solid var(--secondary-color);
@@ -98,6 +116,7 @@ $padding: 20px;
         background: transparent;
         opacity: 1;
     }
+
     .icon-brand {
         width: 40px;
 
@@ -118,11 +137,9 @@ $padding: 20px;
 
         position: relative;
         z-index: 1000;
-
-        
     }
 
-    .navbar {
+    .nav-container {
         align-items: center;
         justify-content: center;
 

@@ -1,4 +1,3 @@
-//import Data from "./Coberturas.data.json";
 
 import triunfoImg from "../../img/triunfo-logo.png";
 import coberturasIcon from "../../img/coberturas-icon.svg";
@@ -6,7 +5,6 @@ import coberturasIcon from "../../img/coberturas-icon.svg";
 import "./Coberturas.scss";
 
 export default function Coberturas() {
-
   return (
     <section id="coberturas" className="coberturas flex-column section-padding-half">
       <div>

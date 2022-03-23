@@ -1,7 +1,8 @@
+import {memo} from "react";
+
 import "./HamButton.scss";
 
-
-export default function HamButton({menu, clickHandle}) {
+export default memo(function HamButton({menu, clickHandle}) {
   return (
     <button type="button" onClick={clickHandle} > 
       { menu 
@@ -18,4 +19,4 @@ export default function HamButton({menu, clickHandle}) {
       }
     </button>
   ); 
-}
+});

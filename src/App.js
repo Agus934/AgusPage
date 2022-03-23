@@ -2,14 +2,15 @@ import Header from './views/header/Header';
 import Main from './views/main/Main';
 import Footer from "./views/footer/Footer";
 
+
 import './App.scss';
 
 function App() {
   return (
     <>
-      <Header />
+      <Header nav/>
       <Main />
-      <Footer />
+      <Footer whatsapp/>
     </>
   );
 }

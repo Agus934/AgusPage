@@ -91,6 +91,24 @@
   opacity: 0;
 }
 
+//PLACEHOLDER
+.ph-body {
+  width: 100%;
+  padding: 0 10px 10px;
+}
+.ph-text {
+  width: 20%;
+  height: 30px;
+  margin: 20px 0 10px;
+
+  border-radius: 10px;
+}
+.ph-full {
+  width: 100%;
+  height: 30px;
+
+  border-radius: 10px;
+}
 
 @media screen and (max-width: 760px)  {
    

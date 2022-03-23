@@ -1,45 +1,23 @@
-import {memo, useState} from "react";
-import Modal from "./Modal.js";
 
-//TEXTAREA
-export const Textarea = memo(function(props)  {
-  const className = props.className || "";
-  return <textarea name={props.name} className={"fs-text-s form-control fm_tx" + className}  placeholder={props.placeholder} />
-});
-//SELECT
-export const Select = memo(function(props)  {
-  const className = props.className || "";
-  return (
-    <select name={props.name} className={"fs-text-s form-control" + className}  placeholder={props.placeholder}>
-      {props.children}
-    </select>
-  );
-});
-//OPTION
-export const Option = memo(function(props)  {
-  return (
-    <>
-      { props.selected 
-        ? <option className="fs-text-s" value={props.value} selected="true">{props.text}</option>
-        : <option className="fs-text-s" value={props.value}>{props.text}</option>
-      }
-    </>
-  )
-})
 
+/* Verify functions */
 const generalInput = (input, setRequired) => {
   if (input === "") {
     setRequired(true);
+    return true;
   } else {
     setRequired(false);
+    return false;
   }
 }
 
 const dniInput = (input, setRequired) => {
   if (/^\d{6,8}$/.test(input)) {
     setRequired(false);
+    return false;
   } else {
     setRequired(true);
+    return true;
   }
 }
 
@@ -55,8 +33,10 @@ const telInput = (input, setRequired) => {
   
   if (!bool) {
     setRequired(true);
+    return true;
   } else {
     setRequired(false);
+    return false;
   }
 }
 
@@ -64,32 +44,37 @@ const telInput = (input, setRequired) => {
 const codigoPostalInput = (input, setRequired) => {
   if (/^[a-zA-Z]?\d{4}$/.test(input)) {
     setRequired(false);
+    return false;
   } else {
     setRequired(true);
+    return true;
   }
 } 
 
 const emailInput = (input, setRequired) => {
-  let reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!reg.test(input)) { 
     setRequired(true);
+    return true;
   } else {
     setRequired(false);
+    return false;
   }
 }
 
 const anoInput = (input, setRequired, min) => {
   let minYear = min;
   const maxYear = (new Date()).getFullYear();
-
-  if (minYear < input.value || input.value > maxYear) {
-    setRequired(true);
-  } else {
+  if (minYear <= input && input <= maxYear && input !== "") {
     setRequired(false);
+    return false;
+  } else {
+    setRequired(true);
+    return true;
   }
 }
 
-const isRequired = (name, input, setRequired, min) => {
+export default  function isRequired(name, input, setRequired, min) {
   switch (name) {
     case "dni": 
       return dniInput(input, setRequired);
@@ -106,37 +91,5 @@ const isRequired = (name, input, setRequired, min) => {
   } 
 };
 
-//INPUT
-export const Input = memo(function(props)  {
-  const [required, setRequired] = useState(false);
-  const [input, setInput] = useState("");
-  
-  if (props.send?.value) {
-    isRequired(props.name, input, setRequired, props.min);
-    props.send.requiredValues(prev => ({
-      ...prev,
-      requiredValues: [...prev.requiredValues, required]
-    }));
-  }
-
-  const handler = (e) => {
-    if (required) isRequired(props.name, e.target.value, setRequired, props.min);
-    setInput(e.target.value);
-  }
-  
-  const className = "fs-text-s form-control" + (props.className || "");
-  return (
-    <input 
-      name={props.name} 
-      type={props.type}
-      className={required? className + " is-invalid" : className}  
-      placeholder={props.placeholder} 
-      min={props.min}
-      max={props.max}
-      value={input}
-      onChange={handler}
-    />
-  );
-});
-
-
+ 
+export const isSomeRequired = (requires) => requires.some(el => el === true);

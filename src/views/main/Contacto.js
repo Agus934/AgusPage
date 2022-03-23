@@ -1,4 +1,38 @@
 import "./Contacto.scss";
+import Form from "../Form/Form.js"
+
+
+const formData = {
+    "Contacto": {
+      "rows": [
+        { 
+          "Nombres": {
+            "placeholder": "Nombre",
+            "name": "nombre",
+            "type": "text",
+            "required": "default",
+            "label": false
+          },
+          "Email": {
+            "placeholder": "Email",
+            "name": "email",
+            "type": "email",
+            "required": "Email invalido",
+            "label": false
+          }
+        }, {
+          "Comentarios": {
+            "placeholder": "Mensaje",
+            "name": "mensaje",
+            "type": "textarea",
+            "required": false,
+            "label": false
+          }
+        }
+      ]
+    }
+}
+
 
 export default function Contacto() {
   return (
@@ -18,40 +52,7 @@ export default function Contacto() {
         </div>
       </div>
       <div className="flex-column align-c justify-c">                           
-        <form id="contacto-form" className="contacto-form" >
-          <div className="form-container">
-            <div className="flex-r-change">
-              <div className="form-input">
-                <input type="text" 
-                  className="form-control fm_el fs-text-s" 
-                  title="escriba su nombre" 
-                  name="nombre" 
-                  placeholder="Nombre"
-                />
-                <div className="invalid-feedback">Valor requerido</div>
-              </div>
-              <div className="form-input">
-                <input type="email"
-                  className="form-control fm_el fs-text-s"
-                  title="escriba su email"
-                  name="email"
-                  placeholder="Email"
-                />
-                <div className="invalid-feedback">Valor requerido</div>
-              </div>
-            </div>
-            <div className="form-input">
-              <textarea className="form-control fm_tx fs-text-s" 
-                name="consulta" 
-                placeholder="Mensaje"
-              />
-              <div className="invalid-feedback">Valor requerido</div>
-            </div>
-            <div className="form-input flex-column align-c justify-c">
-              <button className="fm_btn fs-text-s" name="submit" type="submit">Enviar Consulta</button>
-            </div>
-          </div>
-        </form>
+          <Form className="contacto" name="Contacto" formData={formData} whatsapp={false}/>
       </div>
     </section>
   );
