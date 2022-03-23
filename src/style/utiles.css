@@ -75,6 +75,16 @@
   margin-bottom: 10px;
 }
 
+.fs-text-xxl {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.fs-text-xl {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
 .fs-text-l {
   font-size: 2.2rem;
   margin-bottom: 10px;
@@ -105,6 +115,14 @@
   .fs-subtitle { 
     font-size: 1.7rem;
     letter-spacing: 0.5px;
+  }
+
+  .fs-text-xxl {
+    font-size: 2.2rem;
+  }
+
+  .fs-text-xl {
+    font-size: 1.9rem;
   }
 
   .fs-text-l {

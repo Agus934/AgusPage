@@ -1,5 +1,5 @@
 import Inicio from "./Inicio"
-import Coberturas from "./Coberturas"
+import Coberturas from "./coberturas/Coberturas"
 import SobreMi from "./SobreMi";
 import Cotiza from "./Cotiza";
 import Contacto from "./Contacto";

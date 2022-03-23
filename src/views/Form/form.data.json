@@ -10,7 +10,7 @@
           "label": true,
           "required": "default"
         },
-        "Appellidos": {
+        "Apellidos": {
           "placeholder": "ej: Gordillo",
           "name": "apellido",
           "type": "text",

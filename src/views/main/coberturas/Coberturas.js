@@ -1,8 +1,10 @@
+import Productos from "./Productos.js";
 
-import triunfoImg from "../../img/triunfo-logo.png";
-import coberturasIcon from "../../img/coberturas-icon.svg";
+import triunfoImg from "../../../img/triunfo-logo.png";
+import coberturasIcon from "../../../img/coberturas-icon.svg";
 
 import "./Coberturas.scss";
+
 
 export default function Coberturas() {
   return (
@@ -29,8 +31,8 @@ export default function Coberturas() {
             </div>
           </div>
         </div>
-        <div className="coberturas-content">
-
+        <div className="coberturas-content flex-column align-c justify-c">
+          <Productos/>
         </div>
       </div>
     </section>

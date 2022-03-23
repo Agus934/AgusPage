@@ -268,8 +268,6 @@ export default memo(function Form(props) {
     }
   } 
   
-  console.log(props)
-
   const name = props.name;
   const formData = props.formData;
   const imports = formData[name].import;
