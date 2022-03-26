@@ -26,20 +26,20 @@ export default memo(function Header(props) {
             </div>
             <nav id="nav" className={!menu ? "nav-container flex-r-change" : "nav-container flex-r-change hidden"}>
               <ul className="nav-cont flex-r-change">
-                <li className="nav-item">
-                  <a href="#inicio" className="nav-link smoothScroll" onClick={clickHandle}>Inicio</a>
+                <li className="nav-el">
+                  <a href="#inicio" className="nav-link smoothScroll fs-nav" onClick={clickHandle}>Inicio</a>
                 </li>
-                <li className="nav-item">
-                  <a href="#coberturas" className="nav-link smoothScroll" onClick={clickHandle}>Coberturas</a>
+                <li className="nav-el">
+                  <a href="#sobre-mi" className="nav-link smoothScroll fs-nav" onClick={clickHandle}>Sobre Mí</a>
                 </li>
-                <li className="nav-item">
-                  <a href="#sobre-mi" className="nav-link smoothScroll" onClick={clickHandle}>Sobre Mí</a>
+                <li className="nav-el">
+                  <a href="#coberturas" className="nav-link smoothScroll fs-nav" onClick={clickHandle}>Coberturas</a>
                 </li>
-                <li className="nav-item">
-                  <a href="#cotiza" className="nav-link smoothScroll" onClick={clickHandle}>Cotizá</a>
+                <li className="nav-el">
+                  <a href="#cotiza" className="nav-link smoothScroll fs-nav" onClick={clickHandle}>Cotizá</a>
                 </li>
-                <li className="nav-item">
-                  <a href="#contacto" className="nav-link smoothScroll" onClick={clickHandle}>Contacto</a>
+                <li className="nav-el">
+                  <a href="#contacto" className="nav-link smoothScroll fs-nav" onClick={clickHandle}>Contacto</a>
                 </li>
               </ul>
             </nav>
@@ -47,8 +47,8 @@ export default memo(function Header(props) {
         )
         //go main page
         : (
-          <div id="inicioButton" className="inicioButton flex-column">
-              <a href="./" className="goToInicio">Inicio</a>
+          <div id="inicioButton" className="inicioButton flex-column nav-el">
+              <a href="./" className="goToInicio nav-link fs-nav">Inicio</a>
           </div>
         )
       }

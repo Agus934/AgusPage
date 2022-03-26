@@ -1,5 +1,7 @@
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import Form from "../Form/Form.js";
+
+import FormContext from "./CotizaFormsStore.js";
 
 import DataForm from "../Form/form.data.json";
 
@@ -11,6 +13,8 @@ const formNames = ( () => {
   let k = Object.keys(DataForm);
   return k.filter(n => !DataForm[n].notFormatter)
 })();
+
+
 
 const Placeholders = () => {
   return (
@@ -59,25 +63,28 @@ function CotizaButton(props) {
       onClick={props.handleClick}
       value={props.name}
     >
-      <h4 className="fs-text">{props.text}</h4>
+      <h4 className="fs-text text-bold">{props.text}</h4>
     </button>
   );
 }
 
 
 function CreateCotizaBody(props) {
-  const [formClick, setFormClick] = useState(formNames[0]);
   const [animation, setAnimation] = useState("");
-
-
-  const handleClick = (e) => {
-    setAnimation("animation");
-    setFormClick(e.currentTarget.value);
-  }
-
   useEffect(() => {
     setTimeout(() => setAnimation(""), 500);
   },[animation]);
+
+  const form = useContext(FormContext);
+  const formName = form.formName.name;
+
+  const handleClick = (e) => {
+    const value = e.currentTarget.value;
+    if (value !== formName) {
+      setAnimation("animation");
+      form.setFormName(prev => ({...prev, name:e.currentTarget.value}));
+    }
+  }
 
   return (
     <>
@@ -85,7 +92,7 @@ function CreateCotizaBody(props) {
         {props.formNames.map(name => {
           return ( 
           <CotizaButton key={name + "-button"} 
-            selected={name === formClick? true : false} 
+            selected={name === formName? true : false} 
             name={name}
             text={props.data[name].name}
             handleClick={handleClick}
@@ -94,7 +101,7 @@ function CreateCotizaBody(props) {
       </div>
       <div id="cotiza-forms" className="cotiza-forms">
         {animation !== "animation"
-          ? <Form className="cotiza" name={formClick} formData={props.data} whatsapp/>
+          ? <Form className="cotiza" name={formName} formData={props.data} whatsapp/>
           : <Placeholders />
         }
       </div>
@@ -114,7 +121,7 @@ export default function Cotiza() {
           />
         </div>
         <div className="cotiza-title-text">
-          <h2 className="fs-title">Cotizá</h2>
+          <h2 className="fs-title c-secondary">Cotizá</h2>
           <p className="fs-text">Obtené una atención más rápida y eficiente</p>
           <p className="fs-text">Mandame un mensaje con la información necesaria para tu seguro</p>
         </div>
@@ -125,3 +132,4 @@ export default function Cotiza() {
     </section>
   );
 }
+export {formNames};

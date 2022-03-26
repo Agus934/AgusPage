@@ -1,8 +1,10 @@
 import {useState, useRef, createContext, memo, useContext, useEffect} from "react";
 import Modal from "./Modal.js";
-import isRequired, {isSomeRequired} from "./verifies";
 import createSendMessage from "./createSendMessage.js";
 import * as Redux from 'redux';
+
+import FormContext from "../main/CotizaFormsStore.js";
+import isRequired, {isSomeRequired} from "./verifies";
 
 import "./Form.scss";
 
@@ -50,6 +52,10 @@ const Select = memo(function(props)  {
   const [value, setValue] = useState(selectValue[0].value);
   const className = props.className || "";
   
+  const {formName} = useContext(FormContext);
+  useEffect(()=> {
+    setValue(formName.sub);
+  }, [formName.sub]);
 
   const handleChange = (e) => { setValue(e.target.value) }
 
@@ -174,7 +180,7 @@ const SubmitButton = memo(function(props) {
     <button name="submit" 
       onClick={props.handleSubmit} 
       type="submit" 
-      className="fs-text-s fm_btn"
+      className="fs-text-s c-secondary fm_btn"
     >Enviar por email</button>
   );
 });
@@ -182,8 +188,8 @@ const SubmitButton = memo(function(props) {
 const WhatsappButton = memo(function(props) {
   return (
     <button type="button" onClick={props.handleWhatsapp}>
-      <a className="fm_btn fs-text-s w-api" href="./#cotiza-form" rel="noopener noreferrer">Enviar por WhatsApp</a>
-      <a className="fm_btn fs-text-s w-desk" href="./#cotiza-form" rel="noopener noreferrer">Enviar por WhatsApp</a>
+      <a className="fm_btn fs-text-s c-secondary w-api" href="./#cotiza-form" rel="noopener noreferrer">Enviar por WhatsApp</a>
+      <a className="fm_btn fs-text-s c-secondary w-desk" href="./#cotiza-form" rel="noopener noreferrer">Enviar por WhatsApp</a>
     </button>
   );
 });
@@ -280,7 +286,7 @@ export default memo(function Form(props) {
           <div className="form-container flex-column form-sub">
             <Row rows={formData[name].rows}/>
             {imports && <Row rows={formData[imports].rows} />}
-            <div className="form-input flex-r-change align-c justify-c">
+            <div className="form-input flex-row flex-wrap align-c justify-c">
               <SubmitButton handleSubmit={handleSubmit}/>
               {props.whatsapp &&  <WhatsappButton handleWhatsapp={handleWhatsapp}/> }
             </div>

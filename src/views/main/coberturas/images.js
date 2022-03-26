@@ -1,14 +1,14 @@
-import autos from "../../../img/icons/auto.svg";
-import motos from "../../../img/icons/moto2.svg";
-import bicicleta from "../../../img/icons/bicicleta.svg";
-import monopatin from "../../../img/icons/monopatin.svg";
-import hogar from "../../../img/icons/hogar.svg";
-import integralDeComercio from "../../../img/icons/comercio2.svg";
-import vida from "../../../img/icons/vida.svg";
-import caucion from "../../../img/icons/caucion1.svg";
-import accidentes from "../../../img/icons/accidentes.svg";
-import praxisMedica from "../../../img/icons/praxis-medica1.svg";
-import fuerzasEspeciales from "../../../img/icons/fuerzas-esp1.svg";
+import autos from "../../../img/coberturas/auto.jpg";
+import motos from "../../../img/coberturas/moto.jpg";
+import bicicleta from "../../../img/coberturas/bicicleta.jpg";
+import monopatin from "../../../img/coberturas/monopatin.jpg";
+import hogar from "../../../img/coberturas/hogar.jpg";
+import integralDeComercio from "../../../img/coberturas/comercio.jpg";
+import vida from "../../../img/coberturas/vida.jpg";
+import caucion from "../../../img/coberturas/caucion.jpg";
+import accidentes from "../../../img/coberturas/accidentes.jpg";
+import praxisMedica from "../../../img/coberturas/praxis-medica.jpg";
+import fuerzasEspeciales from "../../../img/coberturas/fuerzas-esp.jpg";
 
 
 const images = {

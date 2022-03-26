@@ -1,62 +1,70 @@
-
 .contacto {
-  background-color: var(--secondary-color);
+    background-color: var(--secondary-color);
 
-  * {
-    color: var(--primary-color);
-  }
-  .contacto-header, 
-  .contact-info {
-    padding: 10px;
-  }
-
-  .contacto-info{
-    align-items: center;
-    justify-content: center;
-
-    .item-info{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 10px;
-
-      .item-icon{
+    .contacto-header,
+    .contact-info {
         padding: 10px;
-        &:before {
-          font-size: 3rem;
-          color: var(--white-color);
-        }
-      }
-      .item-text {
-        color: var(--white-color);
-      }
-
-      .item-text:focus,
-      .item-text:hover{
-        color: var(--terciary-color);
-      }
     }
-  }
-  .contacto-form {
-    width: 80%;
-  }
-}
 
-@media screen and (max-width: 660px) { 
-  .contacto {
-    .contacto-info{
-      .item-info{
-        .item-icon{
-          padding: 5px;
-          &:before {
-            font-size: 2rem;
-          }
+    .contacto-info {
+        align-items: center;
+        justify-content: center;
+
+        .item-info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+
+            .item-icon {
+                padding: 10px;
+                &:before {
+                    font-size: 3rem;
+                    color: var(--white-color);
+                }
+            }
+
+            .item-text:focus,
+            .item-text:hover {
+                color: var(--primary-color) !important;
+            }
         }
-      }
     }
     .contacto-form {
-      width: 95%;
+        width: 80%;
     }
-  }
+}
+
+@media screen and (max-width: 640px) {
+    .contacto {
+        .contacto-info {
+            .item-info {
+                .item-icon {
+                    padding: 5px;
+                    &:before {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        .contacto-form {
+            width: 95%;
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .contacto {
+        .contacto-info {
+            .item-info {
+                .item-icon {
+                    padding: 5px;
+                    &:before {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
 }

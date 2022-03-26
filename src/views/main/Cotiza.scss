@@ -1,5 +1,5 @@
 .cotiza{
-  background-color: var(--white-color);
+  //background-color: var(--white-color);
   background-image: url(../../img/cot-wave1.svg), url(../../img/cot-wave2.svg);
   background-size: 120%, 120%;
   background-position: top, bottom;
@@ -34,9 +34,10 @@
 }
 
 .cotiza-body{
-  background-color: #d7d8e9de;
-  margin: 30px;
-  padding: 10px;
+  background-color: #fcfcfcea;
+
+  padding: 40px;
+  padding-top: 80px;
 
   min-height: 44px;
   min-width: 44px;
@@ -59,6 +60,7 @@
     
     text-align: center;
     
+    border: 1px solid var(--primary-color);
     border-bottom: 5px solid var(--primary-color);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -69,27 +71,30 @@
   }
 
   .select{
-    border-bottom: 5px solid var(--secondary-color);
-    background-color: var(--primary-color);
-  }
+    border-color: var(--secondary-color);
 
-  .nombre-producto:hover,
-  .nombre-producto:focus{
-    background-color: var(--primary-color);
+    * {
+      color: var(--secondary-color) !important;
+    }
   }
 }
 
+@media(hover: hover) and (pointer: fine) {
+  .cotiza-btns{
+    .nombre-producto:hover * {
+      color: var(--primary-color);
+    }
+  }
+}
+
+
 .cotiza-forms{
-  transform: scale(100%);
   opacity: 1;
   transition: all 100ms ease-in-out;
 
-  .form-sub{ width: 90%; }
+  .form-sub{ width: 100%; }
 }
-.animation {
-  transform: scale(50%);
-  opacity: 0;
-}
+
 
 //PLACEHOLDER
 .ph-body {
@@ -118,7 +123,7 @@
     .cotiza-title-img{ padding-right: 0; }
   }
   .cotiza-body{
-    margin: 10px;
+    padding: 20px;
   }
   .cotiza-forms{
     .form-sub{ width: 100%; }

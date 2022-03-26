@@ -1,4 +1,6 @@
 @import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 
 @font-face {
   font-family: "Open Sans Condensed";
@@ -14,13 +16,16 @@
 
 :root {
   --white-color:     #fcfcfc;
+  /* --white-color:     #2b2929; */
   --dark-color:      #161818;
   --gray-color:      #808d8d;
   --primary-color:   #bfc1dd;
   --secondary-color: #232652;
 
-  --font-normal:      'Open Sans Condensed', sans-serif;
-  --font-bold:        'Open Sans Condensed Bold', sans-serif;
+  /* --font-normal:      'Open Sans Condensed', sans-serif; */
+  /* --font-normal: Garamond, serif; */
+  --font-normal: 'Source Sans Pro', sans-serif;
+  /* --font-normal: 'Bitter', serif; */
 
   --transition-l:     all .7s ease-out;
   --transition-n:     all .5s ease-out;
@@ -56,10 +61,12 @@ a {
 a:link,
 a:hover, 
 a:active, 
+a:visited, 
+a:checked,
 a:focus{
   outline: none;
   text-decoration: none;
-  color: initial;
+  color: unset;
   background-color: transparent;
 }
 
