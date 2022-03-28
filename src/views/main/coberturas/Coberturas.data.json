@@ -1,0 +1,87 @@
+{
+    "Seguros": {
+        "Autos": {
+            "value": "autos",
+            "alt": "coberturas-autos",
+            "img": "autos",
+            "description": ["Responsabilidad civil contra terceros.", "Robo y/o hurto.", "Incendio."],
+            "href": "#cotiza-body"
+        },
+        "Motos": {
+            "value": "motos",
+            "alt": "coberturas-motos",
+            "img": "motos",
+            "description": ["Responsabilidad civil contra terceros.", "Robo y/o hurto.", "Incendio."],
+            "href": "#cotiza-body"
+        },
+        "Bicicletas": {
+            "value": "bicicletas",
+            "alt": "coberturas-bicicletas",
+            "img": "bicicleta",
+            "description": ["Responsabilidad civil contra terceros.", "Robo.", "Incendio."],
+            "href": "#cotiza-body"
+        },
+        "Monopatín": {
+            "value": "monopatin",
+            "alt": "coberturas-monopatin",
+            "img": "monopatin",
+            "description": ["Responsabilidad civil contra terceros.", "Robo.", "Incendio."],
+            "href": "#cotiza-body"
+        },
+        "Hogar": {
+            "value": "hogar",
+            "alt": "coberturas-hogar",
+            "img": "hogar",
+            "description": ["Daños por agua/incendio.", "Robo.", "Cristales."],
+            "href": "#cotiza-body"
+        },
+        "Integral de comercio": {
+            "value": "otros", 
+            "sub_value":"Integral de comercio",
+            "alt": "coberturas-integral-de-comercio",
+            "img": "integralDeComercio",
+            "description": ["Incendio.", "Robo.", "Cristales.", "Carteles y/o letreros.", "Equipos electronicos."],
+            "href": "#cotiza-body"
+        },
+        "Vida": {
+            "value": "otros",
+            "sub_value":"Vida" ,
+            "alt": "coberturas-vida",
+            "img": "vida",
+            "description": ["Vida más.", "Vida más express.", "Vida más simple."],
+            "href": "#cotiza-body"
+        },
+        "Caución": {
+            "value": "otros",
+            "sub_value":"Caución" ,
+            "alt": "coberturas-caucion",
+            "img": "caucion",
+            "description": ["Garantia de alquilerers.", "Garantia de obras."],
+            "href": "#cotiza-body"
+        },
+        "Accidentes personales": {
+            "value": "otros",
+            "sub_value":"Accidentes personales",
+            "alt": "coberturas-accidentes",
+            "img": "accidentes",
+            "description": ["Muerte por accidente.", "Incapacidad total y/o parcial permanente por accidente.", "Adicional asistencia médica farmacéutica."],
+            "href": "#cotiza-body"
+        },
+        "Praxis médica": {
+            "value": "otros",
+            "sub_value": "Praxis médica",
+            "alt": "coberturas-praxis-medica",
+            "img": "praxisMedica",
+            "description": ["Responsabilidad civil contractual o extracontractual.", "Defensa penal.", "Seguro de vida hasta $10.000."],
+            "href": "#cotiza-body"
+        },
+        "Fuerzas especiales": {
+            "value": "otros",
+            "sub_value": "Fuerzas especiales",
+            "alt": "coberturas-fuerzas-especiales",
+            "img": "fuerzasEspeciales",
+            "description": ["Vida.", "Proteccion familiar.", "Accidentes personales.","Robo de arma y chaleco."],
+            "href": "#cotiza-body"
+        }
+    }
+}

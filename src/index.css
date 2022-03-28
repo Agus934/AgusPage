@@ -1,26 +1,19 @@
 @import-normalize;
 
 @font-face {
-  font-family: "Open Sans Condensed";
-  src: url('./fonts/OpenSansCondensed-Light.ttf') format('truetype');
+  font-family: "Source Sans Pro";
+  src: url('./fonts/SourceSansPro-Regular.ttf') format('truetype');
 }
-
-@font-face {
-  font-family: "Open Sans Condensed Bold";
-  src: url('./fonts/OpenSansCondensed-Bold.ttf') format('truetype');
-  font-weight: bold;
-}
-
 
 :root {
   --white-color:     #fcfcfc;
+  /* --white-color:     #2b2929; */
   --dark-color:      #161818;
   --gray-color:      #808d8d;
   --primary-color:   #bfc1dd;
   --secondary-color: #232652;
 
-  --font-normal:      'Open Sans Condensed', sans-serif;
-  --font-bold:        'Open Sans Condensed Bold', sans-serif;
+  --font-normal: 'Source Sans Pro', sans-serif;
 
   --transition-l:     all .7s ease-out;
   --transition-n:     all .5s ease-out;
@@ -56,10 +49,12 @@ a {
 a:link,
 a:hover, 
 a:active, 
+a:visited, 
+a:checked,
 a:focus{
   outline: none;
   text-decoration: none;
-  color: initial;
+  color: unset;
   background-color: transparent;
 }
 
