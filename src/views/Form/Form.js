@@ -1,16 +1,17 @@
-import {useState, useRef, createContext, memo, useContext, useEffect} from "react";
+import { useState, useRef, createContext, memo, useContext, useEffect } from "react";
 import Modal from "./Modal.js";
 import createSendMessage from "./createSendMessage.js";
-import * as Redux from 'redux';
+import { createStore } from 'redux';
 
 import FormContext from "../main/CotizaFormsStore.js";
-import isRequired, {isSomeRequired} from "./verifies";
+import isRequired, { isSomeRequired } from "./verifies";
 
 import "./Form.scss";
 
 /****************
 * GLOBAL STATES
 ****************/
+
 /* CONTEXT */
 const Submit = createContext();
 
@@ -25,7 +26,7 @@ const requiresReducer = (state = true, action) => {
       return state;
   }
 }
-const requiresStore = Redux.createStore(requiresReducer);
+const requiresStore = createStore(requiresReducer);
 
 const requiresPush = (val) => {
   requiresStore.dispatch({type: "requires/push", value: val});
@@ -52,10 +53,13 @@ const Select = memo(function(props)  {
   const [value, setValue] = useState(selectValue[0].value);
   const className = props.className || "";
   
-  const {formName} = useContext(FormContext);
+  const { formName } = useContext(FormContext) || { formName: undefined };
+
   useEffect(()=> {
-    setValue(formName.sub);
-  }, [formName.sub]);
+    if (formName) {
+      setValue(formName.sub);
+    }
+  }, [formName?.sub]);
 
   const handleChange = (e) => { setValue(e.target.value) }
 
@@ -196,7 +200,6 @@ const WhatsappButton = memo(function(props) {
 
 
 /* FORM */
-
 export default memo(function Form(props) {
   const [submit, setSubmit] = useState({
     press: false,

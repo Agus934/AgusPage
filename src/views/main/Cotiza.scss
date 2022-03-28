@@ -1,5 +1,5 @@
 .cotiza{
-  //background-color: var(--white-color);
+  width: 100%;
   background-image: url(../../img/cot-wave1.svg), url(../../img/cot-wave2.svg);
   background-size: 120%, 120%;
   background-position: top, bottom;
@@ -19,28 +19,24 @@
   border-radius: 5px;
 
   .cotiza-title-img{
-      padding-right: 10px;
-      width: 100%;
-      max-width: 400px;
-      max-height: 400px;
-      
-      user-select: none;
+    padding-right: 10px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    
+    user-select: none;
 
-      img {
-          width: 100%;
-          height: 100%;
-      }
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
 .cotiza-body{
   background-color: #fcfcfcea;
-
   padding: 40px;
   padding-top: 80px;
-
-  min-height: 44px;
-  min-width: 44px;
 
   border-radius: 5px;
 }
@@ -119,13 +115,9 @@
    
   .cotiza-title {
     margin: 10px;
-
     .cotiza-title-img{ padding-right: 0; }
   }
   .cotiza-body{
     padding: 20px;
-  }
-  .cotiza-forms{
-    .form-sub{ width: 100%; }
   }
 }

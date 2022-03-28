@@ -75,14 +75,13 @@ function CreateCotizaBody(props) {
     setTimeout(() => setAnimation(""), 500);
   },[animation]);
 
-  const form = useContext(FormContext);
-  const formName = form.formName.name;
+  const {formName, setFormName} = useContext(FormContext);
 
   const handleClick = (e) => {
-    const value = e.currentTarget.value;
-    if (value !== formName) {
+    let value = e.currentTarget.value;
+    if (value !== formName.name) {
       setAnimation("animation");
-      form.setFormName(prev => ({...prev, name:e.currentTarget.value}));
+      setFormName(prev => ({...prev, name: value}));
     }
   }
 
@@ -92,7 +91,7 @@ function CreateCotizaBody(props) {
         {props.formNames.map(name => {
           return ( 
           <CotizaButton key={name + "-button"} 
-            selected={name === formName? true : false} 
+            selected={name === formName.name? true : false} 
             name={name}
             text={props.data[name].name}
             handleClick={handleClick}
@@ -101,7 +100,7 @@ function CreateCotizaBody(props) {
       </div>
       <div id="cotiza-forms" className="cotiza-forms">
         {animation !== "animation"
-          ? <Form className="cotiza" name={formName} formData={props.data} whatsapp/>
+          ? <Form className="cotiza" name={formName.name} formData={props.data} whatsapp/>
           : <Placeholders />
         }
       </div>
