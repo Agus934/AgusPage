@@ -228,7 +228,7 @@ export default memo(function Form(props) {
     if (!isSomeRequired(getRequires())){
       setModalStatus("loading");
 
-      fetch("https://formsubmit.co/ajax/axel.a.sar.97@gmail.com", {
+      fetch("https://formsubmit.co/ajax/agustina.seguros.gordillo@gmail.com", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
