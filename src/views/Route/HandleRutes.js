@@ -37,7 +37,7 @@ export default function RouteElement(props) {
           <div className="flex-row align-c justify-c">
             <h1 className="fs-title">{DataForm[props.formName].name}</h1>
           </div>
-          <div id="create-forms" className="create-forms">
+          <div id="cotiza-forms" className="create-forms">
             <Form className="cotiza" name={props.formName} formData={DataForm} whatsapp/>
           </div>
         </div>

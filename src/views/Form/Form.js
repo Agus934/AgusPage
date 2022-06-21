@@ -190,10 +190,12 @@ const SubmitButton = memo(function(props) {
 });
 
 const WhatsappButton = memo(function(props) {
+  let LOACTION = window.location;
+  let public_url = LOACTION.origin + LOACTION.pathname
   return (
     <button type="button" onClick={props.handleWhatsapp}>
-      <a className="fm_btn fs-text-s c-secondary w-api" href="./#cotiza-form" rel="noopener noreferrer">Enviar por WhatsApp</a>
-      <a className="fm_btn fs-text-s c-secondary w-desk" href="./#cotiza-form" rel="noopener noreferrer">Enviar por WhatsApp</a>
+      <a className="fm_btn fs-text-s c-secondary w-api" href={public_url + "#cotiza-form"} rel="noopener noreferrer">Enviar por WhatsApp</a>
+      <a className="fm_btn fs-text-s c-secondary w-desk" href={public_url + "#cotiza-form"} rel="noopener noreferrer">Enviar por WhatsApp</a>
     </button>
   );
 });
@@ -239,7 +241,9 @@ export default memo(function Form(props) {
       .then(response => response.json())
       .then(data => {
         if (data.success === 'true') setModalStatus("success");
-        else Promise.reject(data);
+        else {
+          return Promise.reject(data);
+        }
       })
       .catch(() => setModalStatus("error"));
       
@@ -261,7 +265,9 @@ export default memo(function Form(props) {
     }
 
     if (matches) {
-      if (!isSomeRequired(getRequires())) {         
+      if (!isSomeRequired(getRequires())) {  
+        const prevHref = e.target.href;
+
         e.target.target = '_blank';
         e.target.href = href
         e.target.search = `?phone=5493512876508&text=${createSendMessage(form.current, false)}&app_absent=0`;
@@ -270,7 +276,7 @@ export default memo(function Form(props) {
         await clearInputs();
 
         setTimeout( () => {
-          e.target.href = "./#cotiza-form";
+          e.target.href = prevHref;
           e.target.target = "";
         }, 500);
       }
@@ -280,7 +286,6 @@ export default memo(function Form(props) {
   const name = props.name;
   const formData = props.formData;
   const imports = formData[name].import;
-
 
   return (
     <>

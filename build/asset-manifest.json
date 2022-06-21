@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fcaaa202.css",
-    "main.js": "/static/js/main.c9383be0.js",
+    "main.css": "/static/css/main.cdc15bf3.css",
+    "main.js": "/static/js/main.73cb4e9d.js",
     "static/media/sobre-mi.webp": "/static/media/sobre-mi.df14f52345f1a02e5533.webp",
     "static/media/SourceSansPro-Regular.ttf": "/static/media/SourceSansPro-Regular.df87f53caf449a3b7572.ttf",
     "static/media/moto.jpg": "/static/media/moto.406aa7c34ddf14c55f70.jpg",
@@ -35,11 +35,11 @@
     "static/media/bicicleta.svg": "/static/media/bicicleta.7202075facca9fa5e0c0b18eca693083.svg",
     "static/media/monopatin.svg": "/static/media/monopatin.50c3f7023f41424bd66290258ede642c.svg",
     "static/media/hogar.svg": "/static/media/hogar.809b603bfbe4452d22540149c0622fc7.svg",
-    "main.fcaaa202.css.map": "/static/css/main.fcaaa202.css.map",
-    "main.c9383be0.js.map": "/static/js/main.c9383be0.js.map"
+    "main.cdc15bf3.css.map": "/static/css/main.cdc15bf3.css.map",
+    "main.73cb4e9d.js.map": "/static/js/main.73cb4e9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.fcaaa202.css",
-    "static/js/main.c9383be0.js"
+    "static/css/main.cdc15bf3.css",
+    "static/js/main.73cb4e9d.js"
   ]
 }
