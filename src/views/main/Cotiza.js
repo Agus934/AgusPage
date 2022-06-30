@@ -1,7 +1,7 @@
-import {useContext, useEffect, useState} from "react";
+import { useContext } from "react";
 import Form from "../Form/Form.js";
 
-import FormContext from "./CotizaFormsStore.js";
+import FormContext from "../CotizaFormsStore.js";
 
 import DataForm from "../Form/form.data.json";
 
@@ -13,46 +13,6 @@ const formNames = ( () => {
   let k = Object.keys(DataForm);
   return k.filter(n => !DataForm[n].notFormatter)
 })();
-
-
-
-const Placeholders = () => {
-  return (
-    <div className="placeholder-container flex-column align-c justify-c" aria-hidden="true">
-      <div className="ph-body placeholder-glow">
-        <span className="placeholder"></span>
-      </div>
-      <div className="ph-body placeholder-glow">
-        <span className="placeholder ph-text"></span>
-        <span className="placeholder ph-full"></span>
-      </div>
-      <div className="ph-body placeholder-glow">
-        <span className="placeholder ph-text"></span>
-        <span className="placeholder ph-full"></span>
-      </div>
-      <div className="ph-body placeholder-glow">
-        <span className="placeholder ph-text"></span>
-        <span className="placeholder ph-full"></span>
-      </div>
-      <div className="ph-body placeholder-glow">
-        <span className="placeholder ph-text"></span>
-        <span className="placeholder ph-full"></span>
-      </div>
-      <div className="ph-body placeholder-glow">
-        <span className="placeholder ph-text"></span>
-        <span className="placeholder ph-full"></span>
-      </div>
-      <div className="ph-body placeholder-glow">
-        <span className="placeholder ph-text"></span>
-        <span className="placeholder ph-full"></span>
-      </div>
-      <div className="ph-body placeholder-glow">
-        <span className="placeholder ph-text"></span>
-        <span className="placeholder ph-full"></span>
-      </div>
-    </div>
-  );
-}
 
 function CotizaButton(props) {
   const className = props.selected ? "select" : "";
@@ -70,17 +30,13 @@ function CotizaButton(props) {
 
 
 function CreateCotizaBody(props) {
-  const [animation, setAnimation] = useState("");
-  useEffect(() => {
-    setTimeout(() => setAnimation(""), 500);
-  },[animation]);
+
 
   const {formName, setFormName} = useContext(FormContext);
 
   const handleClick = (e) => {
     let value = e.currentTarget.value;
     if (value !== formName.name) {
-      setAnimation("animation");
       setFormName(prev => ({...prev, name: value}));
     }
   }
@@ -99,10 +55,7 @@ function CreateCotizaBody(props) {
         )})}  
       </div>
       <div id="cotiza-forms" className="cotiza-forms">
-        {animation !== "animation"
-          ? <Form className="cotiza" name={formName.name} formData={props.data} whatsapp/>
-          : <Placeholders />
-        }
+        <Form className="cotiza" name={formName.name} formData={props.data} whatsapp/>
       </div>
     </>
   );

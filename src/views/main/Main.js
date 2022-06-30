@@ -6,7 +6,7 @@ import SobreMi from "./SobreMi";
 import Cotiza, {formNames} from "./Cotiza";
 import Contacto from "./Contacto";
 
-import FormContext from "./CotizaFormsStore";
+import FormContext from "../CotizaFormsStore";
 
 export default function Main() {
   const [formName, setFormName] = useState({

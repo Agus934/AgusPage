@@ -1,5 +1,3 @@
-
-
 /* Verify functions */
 const generalInput = (input, setRequired) => {
   if (input === "") {
@@ -74,7 +72,7 @@ const anoInput = (input, setRequired, min) => {
   }
 }
 
-export default  function isRequired(name, input, setRequired, min) {
+export function isRequired(name, input, setRequired, min) {
   switch (name) {
     case "dni": 
       return dniInput(input, setRequired);
@@ -89,7 +87,31 @@ export default  function isRequired(name, input, setRequired, min) {
     default: 
       return generalInput(input, setRequired);
   } 
-};
+}
 
- 
-export const isSomeRequired = (requires) => requires.some(el => el === true);
+export function CreateRequiresStore() {
+  let A = [];
+  const retObj = {}
+  Object.defineProperties(retObj, {
+    "push": {
+      value: function(val) {
+        A.push(val);
+      },
+      enumerable: true,
+    },
+    "clear": {
+      value: function() { A = [] },
+      enumerable: true
+    },
+    "value": {
+      get: function() { return A },
+      enumerable: true,
+    },
+    "isSomeRequired": {
+      value: function() {
+        return A.some(el => el === true);
+      }
+    }
+  });
+  return retObj;
+}

@@ -1,6 +1,6 @@
 import { useContext, memo } from 'react';
 
-import FormContext from '../CotizaFormsStore.js';
+import FormContext from '../../CotizaFormsStore.js';
 
 import images from "./images.js";
 

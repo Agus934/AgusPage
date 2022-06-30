@@ -1,11 +1,10 @@
 import { useState, useRef, createContext, memo, useContext, useEffect } from "react";
 import Modal from "./Modal.js";
 import createSendMessage from "./createSendMessage.js";
-import { createStore } from 'redux';
 
-import FormContext from "../main/CotizaFormsStore.js";
-import isRequired, { isSomeRequired } from "./verifies";
+import FormContext from "../CotizaFormsStore.js";
 
+import { isRequired, CreateRequiresStore } from "./requires.js";
 import "./Form.scss";
 
 /****************
@@ -14,27 +13,7 @@ import "./Form.scss";
 
 /* CONTEXT */
 const Submit = createContext();
-
-/* REDUX */
-const requiresReducer = (state = true, action) => {
-  switch (action.type) {
-    case 'requires/push': 
-      return [...state, action.value];
-    case 'requires/clear':
-      return [];
-    default: 
-      return state;
-  }
-}
-const requiresStore = createStore(requiresReducer);
-
-const requiresPush = (val) => {
-  requiresStore.dispatch({type: "requires/push", value: val});
-} 
-const requiresClear = () => {
-  requiresStore.dispatch({type: "requires/clear"});
-}
-const getRequires = () => requiresStore.getState();
+const requiresStore = CreateRequiresStore();
 
 
 /************************
@@ -54,12 +33,12 @@ const Select = memo(function(props)  {
   const className = props.className || "";
   
   const { formName } = useContext(FormContext) || { formName: undefined };
-
+  const sub = formName?.sub;
   useEffect(()=> {
-    if (formName) {
-      setValue(formName.sub);
+    if (sub) {
+      setValue(sub);
     }
-  }, [formName?.sub]);
+  }, [sub]);
 
   const handleChange = (e) => { setValue(e.target.value) }
 
@@ -83,22 +62,21 @@ const Input = memo(function(props)  {
   const [required, setRequired] = useState(false);
   const [input, setInput] = useState("");
 
-  const submit = useContext(Submit);
-
+  const {press, send} = useContext(Submit);
   const inputHandler = (e) => { setInput(e.target.value); }
 
   useEffect(function  () {
-    if (submit.press) {
+    if (press) {
       const bool = isRequired(props.name, input, setRequired, props.min);
-      requiresPush(bool);
+      requiresStore.push(bool);
     }
-  },[submit.press]);
+  },[press]);
 
   useEffect(function  () {
-    if (submit.send) {
+    if (send) {
       setInput("");
     }
-  },[submit.send]);
+  },[send]);
 
   const className = "fs-text-s form-control" + (props.className || "");
   
@@ -212,7 +190,7 @@ export default memo(function Form(props) {
   const form = useRef();
   
   const createRequires = async () => {
-    requiresClear()
+    requiresStore.clear()
     await setSubmit(prev => ({...prev, press:true}));
     await setSubmit(prev => ({...prev, press:false}));
   } 
@@ -227,7 +205,7 @@ export default memo(function Form(props) {
 
     await createRequires();
 
-    if (!isSomeRequired(getRequires())){
+    if (!requiresStore.isSomeRequired()){
       setModalStatus("loading");
 
       fetch("https://formsubmit.co/ajax/agustina.seguros.gordillo@gmail.com", {
@@ -250,7 +228,8 @@ export default memo(function Form(props) {
       form.current.reset();
       await clearInputs();
     }
-  } 
+  }
+
   const handleWhatsapp = async (e) => {
     await createRequires();
     let matches = false;
@@ -265,7 +244,7 @@ export default memo(function Form(props) {
     }
 
     if (matches) {
-      if (!isSomeRequired(getRequires())) {  
+      if (!requiresStore.isSomeRequired()) {  
         const prevHref = e.target.href;
 
         e.target.target = '_blank';
