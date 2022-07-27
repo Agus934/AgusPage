@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.cdc15bf3.css",
+    "main.css": "/static/css/main.21a9ab37.css",
     "main.js": "/static/js/main.ceefd8cd.js",
     "static/media/sobre-mi.webp": "/static/media/sobre-mi.df14f52345f1a02e5533.webp",
     "static/media/SourceSansPro-Regular.ttf": "/static/media/SourceSansPro-Regular.df87f53caf449a3b7572.ttf",
@@ -35,11 +35,11 @@
     "static/media/bicicleta.svg": "/static/media/bicicleta.7202075facca9fa5e0c0b18eca693083.svg",
     "static/media/monopatin.svg": "/static/media/monopatin.50c3f7023f41424bd66290258ede642c.svg",
     "static/media/hogar.svg": "/static/media/hogar.809b603bfbe4452d22540149c0622fc7.svg",
-    "main.cdc15bf3.css.map": "/static/css/main.cdc15bf3.css.map",
+    "main.21a9ab37.css.map": "/static/css/main.21a9ab37.css.map",
     "main.ceefd8cd.js.map": "/static/js/main.ceefd8cd.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdc15bf3.css",
+    "static/css/main.21a9ab37.css",
     "static/js/main.ceefd8cd.js"
   ]
 }
