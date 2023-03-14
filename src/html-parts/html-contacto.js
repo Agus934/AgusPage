@@ -30,7 +30,7 @@ module.exports = function () {
     return /*html*/`
 <section id="contacto" class="contacto section-padding flex-column">
     <div class="head text-center">
-        <h3 class="fs-text-l c-primary">Cualquier duda o consulta que tengas no dudes en contactarte</h3>
+        <h3 class="fs-text-l c-primary">Cualquier consulta que tengas no dudes en contactarte</h3>
     </div>
     <div class="info flex-r-change">
         <div class="item">
