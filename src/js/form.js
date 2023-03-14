@@ -233,7 +233,7 @@ function handleSubmit(e) {
     const form = e.currentTarget.form;
     if (canSend(form)) {
         setModalStatus("success");
-        fetch("https://formsubmit.co/ajax/axel.a.sar.97@gmail.com", {
+        fetch("https://formsubmit.co/ajax/agustina.seguros.gordillo@gmail.com", {
             method: "POST",
             headers: { 
             'Content-Type': 'application/json',
