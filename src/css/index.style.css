@@ -1,0 +1,587 @@
+/*****************************************************/
+/*NAV*/
+/* menu-btn */
+.ham-btn {
+    display: none;
+}
+.ham-btn svg {
+    width: 30px;
+    height: 100%;
+}
+
+.nav {
+    max-width: var(--max-width);
+    position: relative;
+    justify-content: flex-end;
+    width: 100%;
+    opacity: 80%;
+    transform: translateX(0);
+	transition: var(--transition-f);
+}
+.nav ul{
+    margin: 0;
+    width: 60%;
+}
+.nav li {
+    list-style-type: none;
+}
+
+.nav .item .link {
+    display: inline-block;
+    padding: 5px;
+    
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+
+.nav .item .link:active {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.nav .item .link:focus,
+.nav .item .link:visited, 
+.nav .item .link:checked,
+.nav .item .link:hover{
+    color: var(--secondary-color);
+}
+
+/*****************************************************/
+/*INICIO*/
+.inicio {
+    width: 100%;
+    min-height: 80vh;
+    background-image: url("./media/Wave-Line.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.inicio .text {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.inicio .text h1,
+.inicio .text p {
+    text-align: right;
+}
+
+.inicio .img {
+    max-width: 600px;
+    max-height: 600px;
+    width: 100%;
+    padding: 10px;
+}
+
+.inicio .img .nombre {
+    font-size: 2rem;
+}
+.inicio .img .profesion {
+    font-size: 1.7rem;
+}
+
+.inicio .img svg {
+    width: 100%;
+    height: 100%;
+}
+
+/*****************************************************/
+/*SOBRE MI*/
+.sobre-mi {
+    min-height: 80vh;
+    height: 100%;
+    width: 100%;
+}
+
+.sobre-mi .photo {
+    width: 40%;
+    height: 600px;
+    max-width: 700px;
+}
+
+.sobre-mi .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sobre-mi .text {
+    max-width: 1200px;
+    width: 60%;
+    height: auto;
+    justify-content: space-between;
+    padding: 10px 20px 10px 80px;
+
+    background-image: url('./media/mass-circles.svg');
+    background-position: top right;
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+}
+
+/*****************************************************/
+/*COBERTURAS*/
+
+.coberturas {
+    width: 100%;
+    margin: 40px 0 90px;
+}
+
+.coberturas .head {
+    max-width: var(--max-width);
+    width: 100%;
+    padding: 20px 10px 60px;
+}
+
+.coberturas .head .text img {
+    max-width: 200px;
+}
+
+.coberturas .head .img {
+    width: 40%;
+}
+
+.coberturas .head .img img {
+    max-width: 500px;
+   
+}
+
+.coberturas .body {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.coberturas .product {
+    max-width: 380px;
+    min-width: 280px;
+    min-height: 200px;
+    height: 100%;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 3px 3px 1px 0 var(--primary-color);
+}
+
+.coberturas .product span {
+    margin: 0;
+    padding: 0 5px;
+}
+
+.coberturas .product .title {
+    padding: 2px 0 10px;
+}
+
+.coberturas .product .title svg {
+    width: 30px;
+    height: 30px;
+}
+
+.coberturas .product .description {
+    padding-left: 5px;
+}
+
+.coberturas .product .description .element {
+    margin: 5px 0;
+}
+
+.coberturas .product .description p {
+    margin: 0;
+    padding: 0 5px;
+}
+
+.coberturas .product .description svg {
+    width: 15px;
+    height: 15px;
+}
+
+.coberturas .product .description .element div {
+    padding-top: 4px;
+}
+
+
+/*****************************************************/
+/*COTIZA*/
+
+.cotiza {
+    width: 100%;
+    background-image: 
+        url(./media/cot-wave1.svg),
+        url(./media/cot-wave2.svg);
+    background-size: 120%, 120%;
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+  
+    border-left: 8px solid var(--secondary-color);
+    border-right: 8px solid var(--secondary-color);
+    outline: 10px solid var(--secondary-color);
+    outline-offset: -4px;
+}
+
+
+.cotiza .head {
+    margin: 10px 80px;
+    padding: 10px;
+}
+
+.cotiza .head .img {
+    padding-right: 10px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.cotiza .head .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.cotiza .head .title {
+    background-color: var(--white-color-op);
+    border-radius: 5px;
+}
+.cotiza .body {
+    padding: 40px;
+    padding-top: 80px;
+}
+
+
+.cotiza .btns {
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: var(--white-color-op);
+    border-radius: 5px;
+}
+
+.cotiza .btns .nombre-producto{
+    flex-grow: 1;
+    min-width: 100px;
+    margin: 5px;
+    padding: 5px;
+    padding-bottom: 0;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-color);
+    
+    background-color: var(--white-color);
+    transition: var(--transition-f);
+    cursor: pointer;
+}
+
+.cotiza .btns .select{
+    border-color: var(--secondary-color);
+}
+
+.cotiza .btns .select  * {
+    color: var(--secondary-color) !important;
+}
+
+
+.cotiza .form {
+    background-color: var(--white-color-op);
+    border-radius: 5px;
+}
+
+@media(hover: hover) and (pointer: fine) {
+    .cotiza .btns .nombre-producto:hover * {
+        color: var(--primary-color);
+    }
+}
+
+/*****************************************************/
+/*CONTACTO*/
+.contacto {
+    background-color: var(--secondary-color);
+}
+
+.contacto .head,
+.contacto .info {
+    padding: 10px;
+}
+
+.contacto .info {
+    align-items: center;
+    justify-content: center;
+}
+.contacto .info .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    color: var(--white-color);
+}
+
+.contacto .info .item svg {
+    width: 40px;
+    height: 40px;
+}
+.contacto .info .item span {
+    padding: 10px;
+}
+
+.contacto .info .item .text:focus,
+.contacto .info .item .text:hover {
+    color: var(--primary-color) !important;
+}
+
+.contacto .form {
+    width: 80%;
+}
+.contacto .form .item .button {
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
+}
+
+.contacto fieldset {
+    border-color: var(--white-color);
+    background-color: var(--secondary-color);
+}
+
+.contacto legend {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+.contacto textarea,
+.contacto input {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.contacto input:-webkit-autofill,
+.contacto input:-webkit-autofill:hover, 
+.contacto input:-webkit-autofill:focus,
+.contacto textarea:-webkit-autofill,
+.contacto textarea:-webkit-autofill:hover,
+.contacto textarea:-webkit-autofill:focus,
+.contacto select:-webkit-autofill,
+.contacto select:-webkit-autofill:hover,
+.contacto select:-webkit-autofill:focus,
+.contacto input:autofill,
+.contacto input:autofill:hover, 
+.contacto input:autofill:focus,
+.contacto textarea:autofill,
+.contacto textarea:autofill:hover,
+.contacto textarea:autofill:focus,
+.contacto select:autofill,
+.contacto select:autofill:hover,
+.contacto select:autofill:focus  {
+    -webkit-text-fill-color: var(--white-color);
+    box-shadow: 0 0 0px 1000px var(--secondary-color) inset;
+    -webkit-box-shadow: 0 0 0px 1000px var(--secondary-color) inset;
+}
+
+/*****************************************************/
+/*MEDIA*/
+
+@media screen and (min-width:2080px) {
+    /*************************************************/
+    /*SOBRE-MI*/
+    .sobre-mi {
+        justify-content: center;
+    }
+    .sobre-mi .photo,
+    .sobre-mi .photo img  {
+        width: 400px;
+        height: 600px;
+    }
+    
+    /*****************************************************/
+    /*COTIZA*/
+
+    .cotiza {
+        background-size: 50%, 50%;
+        background-repeat: repeat-x;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    /*************************************************/
+    /*NAV*/
+    .ham-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bg-icons);
+        border-radius: 5px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .nav {
+        align-items: center;
+        justify-content: center;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        opacity: 90%;
+
+        height: 100%;
+        padding: 20px 0 0;
+
+        background: var(--white-color);
+    }
+    
+    .nav ul {
+        justify-content: space-around;
+        align-items: center;
+        
+        width: 100%;
+        height: 80%;
+        padding: 0;
+
+    }
+
+    .nav .item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav .item .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border-bottom: unset;
+    }
+    
+    .nav .item .link:active,
+    .nav .item .link:hover {
+        border-color: unset;
+    }
+
+    .hidden {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+    }
+    
+    /*************************************************/
+    /*INICIO*/
+    .inicio {
+        min-height: 100%;
+    }
+    .inicio .text {
+        padding: 20px 20px 10px;
+    }
+
+    .inicio .text h1,
+    .inicio .text p {
+        text-align: center;
+    }
+
+    /*************************************************/
+    /*COBERTURAS*/
+    .coberturas .product {
+        max-width: 320px;
+        min-width: 220px;
+        height: 220px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 760px)  {
+    /*************************************************/
+    /*SOBRE-MI*/
+    .sobre-mi {
+        flex-direction: column-reverse;
+        align-items: center;
+        min-height: 100%;
+    }
+    .sobre-mi .text{
+        width: 100%;
+        height: 100%;
+
+        background-position: bottom right;
+        background-size: contain;
+    
+        padding: 50px;
+        margin-right: 0;
+    }
+
+    .sobre-mi .titles {
+        padding-bottom: 80px;
+    }
+
+    .sobre-mi .photo {
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*************************************************/
+    /*COBERTURAS*/
+    .coberturas .head .img {
+        display: none;
+    }
+    .coberturas .product {
+        max-width: 100%;
+        min-width: unset;
+        min-height: unset;
+        width: 80%;
+        height: 100%;
+        margin: 10px 0;
+
+    }
+
+    /*************************************************/
+    /*COTIZA*/
+    .cotiza .head {
+        margin: 10px;
+    }
+
+    .cotiza .head .img {
+        padding-right: 0;
+    }
+
+    .cotiza .body{
+        padding: 20px;
+    }
+
+    .cotiza .btns .nombre-producto {
+        margin-top: 10px;
+        padding: 10px;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /*************************************************/
+    /*CONTACTO*/
+    .contacto .info .item svg {
+        width: 30px;
+        height: 30px;
+    }
+    .contacto .form {
+        width: 95%;
+    }
+}
+
+@media(hover: hover) and (pointer: fine) {
+    /*************************************************/
+    /*NAV*/
+    .nav .item .link:hover{
+        color: inherit;
+        border-color: var(--secondary-color);
+    }
+
+    /*************************************************/
+    /*COBERTURAS*/
+    .coberturas .product .title:hover > span{
+        color: var(--logo-p-color) !important; 
+    }
+
+    /*************************************************/
+    /*COTIZA*/
+    .cotiza .btns .nombre-producto:hover * {
+        color: var(--primary-color);
+    }
+}
