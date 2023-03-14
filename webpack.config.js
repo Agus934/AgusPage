@@ -20,7 +20,7 @@ module.exports = function (env) {
 
     const main_url = (
         isProduction
-        ? "https://www.agustinagordilloseguros.com/"
+        ? "./"
         : "./"
     );
 
