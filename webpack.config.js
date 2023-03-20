@@ -28,7 +28,7 @@ module.exports = function (env) {
         return new HtmlWebpackPlugin({
             filename: `${form?.id}/index.html`,
             templateContent: html_route({
-                url: isProduction ? main_url: "../",
+                url: "../",
                 path: form?.id,
                 title: `Formulario de ${form?.name} - Agustina Gordillo Seguros`,
                 form_data: form,
