@@ -5,10 +5,7 @@ module.exports = {
         description: ["Responsabilidad civil contra terceros.", "Robo y/o hurto.", "Incendio."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                    .st1{fill:none;stroke:#232652;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <circle class="st0" cx="7" cy="23" r="3"/><circle class="st0" cx="23" cy="23" r="3"/>
                 <line class="st0" x1="28" x2="30" y1="19" y2="19"/>
                 <line class="st0" x1="4" x2="24" y1="16" y2="16"/>
@@ -23,10 +20,7 @@ module.exports = {
         description: ["Responsabilidad civil contra terceros.", "Robo y/o hurto.", "Incendio."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                    .st1{fill:none;stroke:#232652;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <path class="st0" d="M9,10l-3.8,9.2C4.6,20.5,5.6,22,7,22h24l0-0.2c-0.6-4.4-4.3-7.8-8.8-7.8H19v5h-6.7C11,19,10,18,10,16.7V10H9z"/>
                 <path class="st0" d="M28,14H18v0c0-1.7,1.3-3,3-3h4C26.7,11,28,12.3,28,14L28,14z"/>
                 <path class="st0" d="M7,11H5V7h2c1.1,0,2,0.9,2,2v0C9,10.1,8.1,11,7,11z"/>
@@ -42,10 +36,7 @@ module.exports = {
         description: ["Responsabilidad civil contra terceros.", "Robo.", "Incendio."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                    .st1{fill:none;stroke:#232652;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <polyline class="st0" points="18,7 21,7 24.6,21.7 26,23 "/>
                 <circle class="st0" cx="26" cy="23" r="5"/>
                 <circle class="st0" cx="6" cy="23" r="5"/>
@@ -59,10 +50,7 @@ module.exports = {
         description: ["Responsabilidad civil contra terceros.", "Robo.", "Incendio."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                    .st1{fill:none;stroke:#232652;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <polyline class="st0" points="21,5 24,5 28,25 "/>
                 <circle class="st0" cx="28" cy="25" r="3"/>
                 <circle class="st0" cx="4" cy="25" r="3"/>
@@ -76,9 +64,7 @@ module.exports = {
         description: ["Daños por agua/incendio.", "Robo.", "Cristales."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-	                .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <polyline class="st0" points="13.3,11.9 16,9 23.3,17 28,17 16,4 4,17 8,17 8,28 24,28 24,20 "/>
             </svg>`,
     },
@@ -88,12 +74,7 @@ module.exports = {
         description: ["Incendio.", "Robo.", "Cristales.", "Carteles y/o letreros.", "Equipos electronicos."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}	
-                    .st1{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3;}
-                    .st2{fill:none;stroke:#232652;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-                    .st3{fill:none;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}.st3{fill:none;}</style>
                 <polyline class="st0" points="27,17 27,28 5,28 5,17"/>
                 <line class="st0" x1="13" x2="13" y1="17" y2="28"/>
                 <polygon class="st0" points="28,12 4,12 7,5 25,5 "/>
@@ -110,9 +91,7 @@ module.exports = {
         description: ["Vida más.", "Vida más express.", "Vida más simple."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-	                .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <polyline class="st0" points="14,10 16,10 18,8 20,12 22,7 24,10"/>
                 <path class="st0" d="M3,25l2.6-4.2c1.5-2.3,4-3.8,6.8-3.8H19v0c0,2.2-1.8,4-4,4h-2"/>
                 <path class="st0" d="M15,21h8l1.2-1.6c1.1-1.5,2.9-2.4,4.8-2.4h0l-2.7,4.8c-1.4,2.6-4.2,4.2-7.1,4.2h0c-4.7,0-9.3,1.4-13.2,4l0,0"/>
@@ -125,10 +104,7 @@ module.exports = {
         description: ["Garantia de alquilerers.", "Garantia de obras."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                    .st1{fill:none;stroke:#232652;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <path class="st0" d="M26.5,3c0.2,0,0.3,0,0.5,0c2.6,0.3,3.9,3.4,2.4,5.6l-9.8,14.7c-1.5,2.2-0.2,5.3,2.4,5.6c0.2,0,0.3,0,0.5,0  c2.2,0,4-1.8,4-4H20"/>
                 <line class="st0" x1="26" x2="9.5" y1="3" y2="3"/>
                 <path class="st0" d="M11.3,10.3l-8.7,13C1.2,25.5,2.4,28.7,5,29c0.2,0,0.3,0,0.5,0H22"/>
@@ -143,11 +119,7 @@ module.exports = {
         description: ["Muerte por accidente.", "Incapacidad total y/o parcial permanente por accidente.", "Adicional asistencia médica farmacéutica."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                    .st1{fill:none;stroke:#232652;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-                    .st2{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}.st1{fill:none;stroke:#232652;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <line class="st0" x1="8" x2="24" y1="12" y2="12"/>
                 <path class="st0" d="M13.5,8.1l-1.2-4.2l0,0c2.3-1.2,5.1-1.2,7.4,0l0,0l-1.2,4.2"/>
                 <path class="st0" d="M19.5,4.9c2,1.2,3.3,3.4,3.3,5.9V12"/>
@@ -161,9 +133,7 @@ module.exports = {
         description: ["Responsabilidad civil contractual o extracontractual.", "Defensa penal.", "Seguro de vida hasta $10.000."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-	                .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <path class="st0" d="M25,13L25,13c-5.9,1.3-12.1,1.3-18,0l0,0l1.8-7.3l0,0c4.6-2.2,9.8-2.2,14.4,0l0,0L25,13z"/>
                 <path class="st0" d="M23.2,16.8c0.6-0.7,1.2-1,1.8-0.8c0.9,0.4,1.2,2,0.7,3.6c-0.5,1.6-1.7,2.7-2.6,2.3c0,0-0.1,0-0.1-0.1  c-0.8,3.5-3.6,6.1-7,6.1s-6.3-2.6-7-6.1c0,0-0.1,0.1-0.1,0.1c-0.9,0.4-2.1-0.7-2.6-2.3C5.7,18,6,16.4,7,16c0.6-0.2,1.3,0.1,1.8,0.8"/>
                 <line class="st0" x1="16" x2="16" y1="7" y2="11"/>
@@ -176,10 +146,7 @@ module.exports = {
         description: ["Vida.", "Proteccion familiar.", "Accidentes personales.","Robo de arma y chaleco."],
         svg: /*html*/`
             <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                    .st1{fill:none;stroke:#232652;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-                </style>
+                <style type="text/css">.st0{fill:none;stroke:#232652;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
                 <path class="st0" d="M24.1,13H7.9c-1.2,0-2.3-0.6-3-1.6L4,10l12-6l12,6l-0.9,1.4C26.4,12.4,25.3,13,24.1,13z"/>
                 <path class="st0" d="M8.8,17.8c-0.6-0.7-1.2-1-1.8-0.8c-0.9,0.4-1.2,2-0.7,3.6c0.5,1.6,1.7,2.7,2.6,2.3c0,0,0.1,0,0.1-0.1  c0.8,3.5,3.6,6.1,7,6.1s6.3-2.6,7-6.1c0,0,0.1,0.1,0.1,0.1c0.9,0.4,2.1-0.7,2.6-2.3C26.3,19,26,17.4,25,17c-0.6-0.2-1.3,0.1-1.8,0.8  "/>
                 <path class="st0" d="M21.8,18H10.2C8.5,18,7,16.5,7,14.8V13h18v1.8C25,16.5,23.5,18,21.8,18z"/>
