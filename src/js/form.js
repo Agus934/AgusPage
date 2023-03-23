@@ -232,7 +232,7 @@ handleSubmit :: (SubmitEvent) -> undefined
 function handleSubmit(e) {
     const form = e.currentTarget.form;
     if (canSend(form)) {
-        setModalStatus("success");
+        setModalStatus("loading");
         fetch("https://formsubmit.co/ajax/agustina.seguros.gordillo@gmail.com", {
             method: "POST",
             headers: { 
@@ -249,7 +249,7 @@ function handleSubmit(e) {
             } else {
                 return Promise.reject(data);
             }
-        }).catch(function () {
+        }).catch(function (err) {
             setModalStatus("error");
         });
     
