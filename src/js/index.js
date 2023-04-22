@@ -1,7 +1,7 @@
 //GLOBAL STATE
 window.form_state = Object.seal({
     id: "autos",
-    subform: undefined
+    field: "otros-accidentes-personales",
 });
 
 const html_cotiza_buttons = document.getElementById("cotiza-buttons");
@@ -21,7 +21,6 @@ function changeIsClose() {
     HTML_nav.classList.toggle("hidden");
     HTML_ham_menu.classList.toggle("display-none");
     HTML_ham_close.classList.toggle("display-none");
-
 }
 
 
@@ -29,20 +28,22 @@ function changeIsClose() {
 toggleCotizaFormFromCotizaButton :: (ClickEvent) -> undefined */
 function toggleCotizaFormFromCotizaButton(e) {
     const button = e.currentTarget;
-    const form_id = button.dataset.value;
-    const current_form_state = window.form_state;
-    const current_form_id = current_form_state.id;
+    const formId = button.dataset.value;
+    const currentFormState = window.form_state;
+    const currentFormId = currentFormState.id;
 
-    if (current_form_id !== form_id) {
+    if (currentFormId !== formId) {
+        const html_current_form = window[currentFormId + "-form"];
 
-        window[current_form_id + "-button"].classList.toggle("select");
+        window[currentFormId + "-button"].classList.toggle("select");
         button.classList.toggle("select");
 
-        window[current_form_id + "-form"].classList.toggle("display-none");
-        window[form_id + "-form"].classList.toggle("display-none");
+        html_current_form.classList.toggle("display-none");
+        window[formId + "-form"].classList.toggle("display-none");
 
-        current_form_state.id = form_id;
-        current_form_state.subform = undefined;
+        html_current_form.reset();
+
+        currentFormState.id = formId;
     }
 }
 
@@ -50,34 +51,33 @@ function toggleCotizaFormFromCotizaButton(e) {
 toggleCotizaFormFromCoberturasButton :: (ClickEvent) -> undefined */
 function toggleCotizaFormFromCoberturasButton(e) {
     const anchor = e.currentTarget;
-    const form_id = anchor.dataset.value;
-    const subform = anchor.dataset.subvalue;
-    const current_form_state = window.form_state;
-    const current_form_id = current_form_state.id;
-    const current_form_subform = current_form_state.subform;
+    const formId = anchor.dataset.value;
+    const field = anchor.dataset.field;
+    const currentFormState = window.form_state;
+    const currentFormField = currentFormState.field;
+    const currentFormId = currentFormState.id;
 
-    if (current_form_id !== form_id || current_form_subform !== subform) {
+    if (currentFormId !== formId || currentFormField !== field) {
+        const html_current_form = window[currentFormId + "-form"];
+
         //toggle class 
-        window[current_form_id + "-button"].classList.toggle("select");
-        window[form_id + "-button"].classList.toggle("select");
+        window[currentFormId + "-button"].classList.toggle("select");
+        window[formId + "-button"].classList.toggle("select");
 
-        window[current_form_id + "-form"].classList.toggle("display-none");
-        window[form_id + "-form"].classList.toggle("display-none");
+        html_current_form.classList.toggle("display-none");
+        window[formId + "-form"].classList.toggle("display-none");
+
+        html_current_form.reset();
 
         //if a select HTMLElement exist change the define a new selected focus 
-        if (window?.[form_id + "-select"] !== undefined) {
-            [...window?.[form_id + "-select"].children].forEach(function (option) {
-                if (option.selected) {
-                    option.selected = false;
-                }
-                if (option.value === subform) {
-                    option.selected = true;
-                }
-            });
+        ///select the specific option 
+        if (window?.[field] !== undefined) {
+            window[currentFormField].selected = false;
+            window[field].selected = true;
         }
         //change global form_state
-        current_form_state.id = form_id;
-        current_form_state.subform = subform;
+        currentFormState.id = formId;
+        currentFormState.field = field;
     }
 }
 

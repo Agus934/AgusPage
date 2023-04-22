@@ -289,31 +289,37 @@ module.exports = {
                         name: "seguro",
                         type: "select",
                         required: "default",
-                        select: "Vida",
+                        select: "Accidentes personales",
                         options: [
                             {
-                                text: "Vida",
-                                value: "Vida",
-                            },
-                            {
-                                text: "Integral de comercio",
-                                value: "Integral de comercio"
-                            },
-                            {
-                                text: "Caución",
-                                value: "Caución"
-                            },
-                            {
+                                id: "otros-accidentes-personales",
                                 text: "Accidentes personales",
                                 value: "Accidentes personales"
                             },
                             {
+                                id: "otros-caucion",
+                                text: "Caución",
+                                value: "Caución"
+                            },
+                            {
+                                id: "otros-fuerzas-especiales",
+                                text: "Fuerzas especiales",
+                                value: "Fuerzas especiales"
+                            },
+                            {
+                                id: "otros-integral-de-comercio",
+                                text: "Integral de comercio",
+                                value: "Integral de comercio"
+                            },
+                            {
+                                id: "otros-praxis-medica",
                                 text: "Praxis médica",
                                 value: "Praxis médica"
                             },
                             {
-                                text: "Fuerzas especiales",
-                                value: "Fuerzas especiales"
+                                id: "otros-vida",
+                                text: "Vida",
+                                value: "Vida",
                             }
                         ]
                     }

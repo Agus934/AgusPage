@@ -66,6 +66,11 @@ function html_options(options, select) {
                     class="fs-text-s"
                     value="${option?.value}"
                     ${(
+                        option?.id !== undefined
+                        ? `id="${option.id}"`
+                        : ""
+                    )}
+                    ${(
                         select === option?.value
                         ? "selected"
                         : ""    

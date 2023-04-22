@@ -32,7 +32,7 @@ PRODUCTS.forEach(function (key) {
                 data-value=${product.form}
                 ${(
                     product.form === "otros"
-                    ? `data-subvalue="${product.name}"`
+                    ? `data-field="otros-${key}"`
                     : ""
                 )}
             >
