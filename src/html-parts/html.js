@@ -51,6 +51,13 @@ module.exports = function ({
     <title>${title}</title>
     <link rel="icon" href="${url}media/favicon.ico"/>
     <link rel="apple-touch-icon" href="${url}media/logo192.png"/>
+    <link
+        rel="preload"
+        href="${url}/fonts/SourceSansPro-Regular.ttf"
+        as="font"
+        type="font/ttf"
+        crossorigin="anonymous"
+    />
     ${
         Array.isArray(script_links)
         ? script_links.reduce(function(acc, link) {
