@@ -36,7 +36,14 @@ module.exports = function ({
     <link rel="manifest" href="${url}manifest.json"/>
 
     <meta name="canonical" href="${url}"/>
-    
+    <link
+        rel="preload"
+        href="${url}fonts/SourceSansPro-Regular.ttf"
+        as="font"
+        type="font/ttf"
+        crossorigin
+    />
+    <link rel="preload" href="${url}media/Wave-Line.svg" as="image"/>
     <!--  SOCIAL MEDIA meta tags -->
     <meta property="og:title" content="${title}"/>
     <meta property="og:description" content="Asesoramiento integral en seguros"/>
@@ -51,13 +58,6 @@ module.exports = function ({
     <title>${title}</title>
     <link rel="icon" href="${url}media/favicon.ico"/>
     <link rel="apple-touch-icon" href="${url}media/logo192.png"/>
-    <link
-        rel="preload"
-        href="${url}/fonts/SourceSansPro-Regular.ttf"
-        as="font"
-        type="font/ttf"
-        crossorigin="anonymous"
-    />
     ${
         Array.isArray(script_links)
         ? script_links.reduce(function(acc, link) {
