@@ -659,8 +659,8 @@ select:autofill,
 select:autofill:hover,
 select:autofill:focus  {
     -webkit-text-fill-color: var(--dark-color);
-    box-shadow: 0 0 0px 1000px var(--white-color) inset;
     -webkit-box-shadow: 0 0 0px 1000px var(--white-color) inset;
+    box-shadow: 0 0 0px 1000px var(--white-color) inset;
 }
 
 /*****************************************************/
