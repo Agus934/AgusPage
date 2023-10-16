@@ -29,11 +29,12 @@ PRODUCTS.forEach(function (key) {
                 id="product-${key}"
                 href="#cotiza-formularios"
                 class="title flex-row align-c"
+                data-type="button"
                 data-value=${product.form}
                 ${(
                     product.form === "otros"
                     ? `data-field="otros-${key}"`
-                    : ""
+                    : "data-field=\"\""
                 )}
             >
                 ${product.svg}

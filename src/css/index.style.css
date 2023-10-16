@@ -29,7 +29,6 @@
 .nav .item .link {
     display: inline-block;
     padding: 5px;
-    
     color: var(--secondary-color);
     font-size: 1.3rem;
     text-align: center;
@@ -138,6 +137,7 @@
 
 .coberturas .head .text img {
     max-width: 200px;
+    width: 100%;
 }
 
 .coberturas .head .img {
@@ -146,7 +146,6 @@
 
 .coberturas .head .img img {
     max-width: 500px;
-   
 }
 
 .coberturas .body {
@@ -173,7 +172,17 @@
 
 .coberturas .product .title {
     padding: 2px 0 10px;
+    position: relative;
 }
+
+.coberturas .product .title::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+}
+
 
 .coberturas .product .title svg {
     width: 30px;
@@ -214,7 +223,6 @@
     background-size: 120%, 120%;
     background-position: top, bottom;
     background-repeat: no-repeat;
-  
     border-left: 8px solid var(--secondary-color);
     border-right: 8px solid var(--secondary-color);
     outline: 10px solid var(--secondary-color);
@@ -258,6 +266,7 @@
 }
 
 .cotiza .btns .nombre-producto{
+    position: relative;
     flex-grow: 1;
     min-width: 100px;
     margin: 5px;
@@ -265,17 +274,23 @@
     padding-bottom: 0;
     text-align: center;
     border-bottom: 5px solid var(--primary-color);
-    
     background-color: var(--white-color);
     transition: var(--transition-f);
     cursor: pointer;
 }
+.cotiza .btns .nombre-producto::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+}
 
-.cotiza .btns .select{
+.cotiza .btns .nombre-producto[data-selected]{
     border-color: var(--secondary-color);
 }
 
-.cotiza .btns .select  * {
+.cotiza .btns .nombre-producto[data-selected]  * {
     color: var(--secondary-color) !important;
 }
 

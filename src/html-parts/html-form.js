@@ -67,7 +67,7 @@ function html_options(options, select) {
                     value="${option?.value}"
                     ${(
                         option?.id !== undefined
-                        ? `id="${option.id}"`
+                            ? `id="${option.id}"`
                         : ""
                     )}
                     ${(
@@ -302,10 +302,15 @@ module.exports = function ({
     name
 }) {
     return /*html*/`
-        <form 
+        <form
             id="${id}-form"
-            class="form flex-column align-c ${display !== undefined ? "": "display-none"}"
+            class="form flex-column align-c"
             data-name="${name}"
+            ${(
+                display !== undefined
+                ? "data-selected"
+                : ""
+            )}
         >
             ${html_rows(data)}
             ${(

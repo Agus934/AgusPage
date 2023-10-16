@@ -11,13 +11,14 @@ function button({name, id, display}) {
     return /*html*/`
         <button
             id="${id}-button"
-            class="nombre-producto ${(
-                display !== undefined
-                ? "select"
-                : ""
-            )}"
+            class="nombre-producto"
             type="button"
             data-value="${id}"
+            ${(
+                display !== undefined
+                ? "data-selected"
+                : ""
+            )}
         >
             <h4 class="fs-text text-bold">${name}</h4>
         </button>

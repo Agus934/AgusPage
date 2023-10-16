@@ -1,7 +1,7 @@
 //GLOBAL STATE
 window.form_state = Object.seal({
     id: "autos",
-    field: "otros-accidentes-personales",
+    field: "",
 });
 
 const html_cotiza_buttons = document.getElementById("cotiza-buttons");
@@ -23,63 +23,88 @@ function changeIsClose() {
     HTML_ham_close.classList.toggle("display-none");
 }
 
+function cotizaButtonsToggleCotizaForm(e) {
+    var target = e.target;
+    var tagName = target.tagName;
+    if (tagName === "BUTTON") {
+        var formId = target.getAttribute("data-value");
+        if (formId !== null && formId !== window.form_state.id) {
+            var currentHTMLForm = document.getElementById(`${window.form_state.id}-form`);
+            var nextHTMLForm = document.getElementById(`${formId}-form`);
+            if (currentHTMLForm === null || nextHTMLForm === null) {
+                throw Error("From does not exist");
+            }
+            currentHTMLForm.toggleAttribute("data-selected");
+            nextHTMLForm.toggleAttribute("data-selected");
+            currentHTMLForm.reset();
 
-/*
-toggleCotizaFormFromCotizaButton :: (ClickEvent) -> undefined */
-function toggleCotizaFormFromCotizaButton(e) {
-    const button = e.currentTarget;
-    const formId = button.dataset.value;
-    const currentFormState = window.form_state;
-    const currentFormId = currentFormState.id;
+            var currentHTMLButton = document.getElementById(`${window.form_state.id}-button`);
+            var nextHTMLButton = document.getElementById(`${formId}-button`);
+            if (currentHTMLButton === null || nextHTMLForm === null) {
+                throw Error("Form Button does not exist");
+            }
+            currentHTMLButton?.toggleAttribute("data-selected");
+            nextHTMLButton?.toggleAttribute("data-selected");
 
-    if (currentFormId !== formId) {
-        const html_current_form = window[currentFormId + "-form"];
-
-        window[currentFormId + "-button"].classList.toggle("select");
-        button.classList.toggle("select");
-
-        html_current_form.classList.toggle("display-none");
-        window[formId + "-form"].classList.toggle("display-none");
-
-        html_current_form.reset();
-
-        currentFormState.id = formId;
-    }
-}
-
-/*
-toggleCotizaFormFromCoberturasButton :: (ClickEvent) -> undefined */
-function toggleCotizaFormFromCoberturasButton(e) {
-    const anchor = e.currentTarget;
-    const formId = anchor.dataset.value;
-    const field = anchor.dataset.field;
-    const currentFormState = window.form_state;
-    const currentFormField = currentFormState.field;
-    const currentFormId = currentFormState.id;
-
-    if (currentFormId !== formId || currentFormField !== field) {
-        const html_current_form = window[currentFormId + "-form"];
-
-        //toggle class 
-        window[currentFormId + "-button"].classList.toggle("select");
-        window[formId + "-button"].classList.toggle("select");
-
-        html_current_form.classList.toggle("display-none");
-        window[formId + "-form"].classList.toggle("display-none");
-
-        html_current_form.reset();
-
-        //if a select HTMLElement exist change the define a new selected focus 
-        ///select the specific option 
-        if (window?.[field] !== undefined) {
-            window[currentFormField].selected = false;
-            window[field].selected = true;
+            window.form_state.id = formId;
         }
-        //change global form_state
-        currentFormState.id = formId;
-        currentFormState.field = field;
     }
 }
+
+function coberturasButtonsToggleCotizaForm(e) {
+    var target = e.target;
+    var type = target.getAttribute("data-type");
+    if (type === "button") {
+        var formId = target.getAttribute("data-value");
+        var formField = target.getAttribute("data-field");
+        if (
+            formId !== null
+            && formField !== null
+            && (
+                formId !== window.form_state.id
+                || (
+                    formId === "otros"
+                    && formField !== window.form_state.field
+                )
+            )
+        ) {
+            var currentHTMLForm = document.getElementById(`${window.form_state.id}-form`);
+            var nextHTMLForm = document.getElementById(`${formId}-form`);
+            if (currentHTMLForm === null || nextHTMLForm === null) {
+                throw Error("From does not exist");
+            }
+            currentHTMLForm.toggleAttribute("data-selected");
+            nextHTMLForm.toggleAttribute("data-selected");
+            currentHTMLForm.reset();
+
+            var currentHTMLButton = document.getElementById(`${window.form_state.id}-button`);
+            var nextHTMLButton = document.getElementById(`${formId}-button`);
+            if (currentHTMLButton === null || nextHTMLForm === null) {
+                throw Error("Form Button does not exist");
+            }
+            currentHTMLButton?.toggleAttribute("data-selected");
+            nextHTMLButton?.toggleAttribute("data-selected");
+
+
+            if (formField !== "") {
+                var nextHTMLField = document.getElementById(formField);
+                if (nextHTMLField !== null) {
+                    nextHTMLField.selected = true;
+                }
+                if (window.form_state.field !== "") {
+                    var currentHTMLField = document.getElementById(window.form_state.filed);
+                    if (currentHTMLField !== null) {
+                        currentHTMLField.selected = false;
+                    }
+                }
+            }
+
+            window.form_state.id = formId;
+            window.form_state.field = formField;
+        }
+    }
+}
+
 
 //ham button change the close state
 HTML_ham.addEventListener("click", changeIsClose);
@@ -89,12 +114,5 @@ for (const HTML_li of HTML_nav.lastElementChild.children) {
     HTML_li.addEventListener("click", changeIsClose);
 }
 
-//TOGGLE COTIZA FORMS from COTIZA BUTTONS
-for (const HTML_button of html_cotiza_buttons.children) {
-    HTML_button.addEventListener("click", toggleCotizaFormFromCotizaButton);
-}
-
-//TOGGLE COTIZA FORMS from COBERTURAS BUTTONS
-for (const HTML_button of html_coberturas_buttons.children) {
-    HTML_button.firstElementChild.addEventListener("click", toggleCotizaFormFromCoberturasButton)
-}
+html_cotiza_buttons.addEventListener("click", cotizaButtonsToggleCotizaForm);
+html_coberturas_buttons.addEventListener("click", coberturasButtonsToggleCotizaForm);

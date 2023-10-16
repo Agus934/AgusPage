@@ -37,17 +37,16 @@ function html_index(main_url) {
         script_links: [
             {
                 src: "index.js",
-                defer: true
+                module: true
             },
             {
                 src: "form.js",
-                defer: true
+                module: true
             }
         ],
         style_links: "index.style.css",
         url: main_url
     });
-    
 }
 
 /*-
@@ -74,7 +73,6 @@ function html_404(main_url) {
         title: "Agustina Gordillo Seguros",
         url: main_url
     });
-    
 }
 
 function html_route({
@@ -118,7 +116,7 @@ function html_route({
         title: title,
         script_links: {
             src: "form.js",
-            defer: true
+            modal: true
         },
         style: /*css*/`
             body {
@@ -133,11 +131,11 @@ function html_route({
                 background-size: 120%, 120%;
                 background-position: top, bottom;
                 background-repeat: no-repeat;
-            
                 border-left: 8px solid var(--secondary-color);
                 border-right: 8px solid var(--secondary-color);
                 outline: 10px solid var(--secondary-color);
                 outline-offset: -4px;
+                padding: 10px;
             }
 
             .route .form,

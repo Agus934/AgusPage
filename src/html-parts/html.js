@@ -31,7 +31,7 @@ module.exports = function ({
     <!-- Robots -->
     <meta name="robots" content="index, follow"/>
     <meta name="googlebot" content="index, follow"/>
-    
+
     <!-- MANIFEST -->
     <link rel="manifest" href="${url}manifest.json"/>
 
@@ -53,7 +53,7 @@ module.exports = function ({
     <meta property="og:image:secure_url" content="${url}logo192.png"/>
     <meta property="og:image:alt" content="Logo AGS"/>
     <meta name="twitter:card" content="summary_large_image/">
-    
+
     <!--  Title and Icon-->
     <title>${title}</title>
     <link rel="icon" href="${url}media/favicon.ico"/>
@@ -63,12 +63,12 @@ module.exports = function ({
         ? script_links.reduce(function(acc, link) {
             return String.prototype.concat.call(
                 acc,
-                `<script ${link?.defer !==  undefined ? "defer" : ""} src="${url}${link.src}"></script>`
+                `<script ${link?.module !==  undefined ? "type=\"module\"" : ""} src="${url}${link.src}"></script>`
             );
         }, "")
         : (
             typeof script_links === "object"
-            ? `<script ${script_links?.defer !==  undefined ? "defer" : ""} src="${url}${script_links.src}"></script>`
+            ? `<script ${script_links?.module !==  undefined ? "type=\"module\"" : ""} src="${url}${script_links.src}"></script>`
             : ""
         )
     }

@@ -164,7 +164,6 @@ module.exports = {
                             to: Number(new Date().getFullYear()),
                             from: 2016
                         }
-                        
                     }
                 ],
                 [
