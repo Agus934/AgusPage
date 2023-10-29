@@ -78,7 +78,7 @@ module.exports = function ({
                 ${html_buttons}
             </div>
         </div>
-        <div id="forms" class="forms flex-row align-c justify-c">
+        <div id="forms" class="forms flex-row align-s justify-c">
             ${html_forms}
         </div>
     </div>

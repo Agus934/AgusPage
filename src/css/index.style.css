@@ -40,7 +40,7 @@
     border-color: var(--primary-color);
 }
 .nav .item .link:focus,
-.nav .item .link:visited, 
+.nav .item .link:visited,
 .nav .item .link:checked,
 .nav .item .link:hover{
     color: var(--secondary-color);
@@ -216,19 +216,37 @@
 /*COTIZA*/
 
 .cotiza {
+    position: relative;
     width: 100%;
-    background-image: 
-        url(./media/cot-wave1.svg),
-        url(./media/cot-wave2.svg);
-    background-size: 120%, 120%;
-    background-position: top, bottom;
-    background-repeat: no-repeat;
     border-left: 8px solid var(--secondary-color);
     border-right: 8px solid var(--secondary-color);
     outline: 10px solid var(--secondary-color);
     outline-offset: -4px;
 }
+.cotiza::after, .cotiza::before {
+    content: "";
+    width: 120%;
+    height: 8rem;
+    position: absolute;
+}
+.cotiza::before {
+    top: 0;
+    background: url(media/cot-wave1.svg);
+    background-position-y: top;
+    background-repeat: repeat-x;
+}
 
+.cotiza::after {
+    bottom: 0;
+    background: url(media/cot-wave2.svg);
+    background-position-y: bottom;
+    background-repeat: repeat-x;
+}
+
+.cotiza :is(.head, .body) {
+    position: relative;
+    z-index: 1;
+}
 
 .cotiza .head {
     margin: 10px 80px;
@@ -251,11 +269,11 @@
     background-color: var(--white-color-op);
     border-radius: 5px;
 }
+
 .cotiza .body {
     padding: 40px;
     padding-top: 80px;
 }
-
 
 .cotiza .btns {
     max-width: 1000px;
@@ -294,6 +312,9 @@
     color: var(--secondary-color) !important;
 }
 
+.cotiza .forms {
+    min-height: 1000px;
+}
 
 .cotiza .form {
     background-color: var(--white-color-op);
@@ -516,7 +537,7 @@
 
         background-position: bottom right;
         background-size: contain;
-    
+
         padding: 50px;
         margin-right: 0;
     }

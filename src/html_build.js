@@ -125,19 +125,40 @@ function html_route({
             .route {
                 width: 100%;
                 background-color: var(--white-color);
-                background-image:
-                    url(${url}media/cot-wave1.svg),
-                    url(${url}media/cot-wave2.svg);
-                background-size: 120%, 120%;
-                background-position: top, bottom;
-                background-repeat: no-repeat;
                 border-left: 8px solid var(--secondary-color);
                 border-right: 8px solid var(--secondary-color);
                 outline: 10px solid var(--secondary-color);
                 outline-offset: -4px;
                 padding: 10px;
+                min-height: 1000px;
+                position: relative;
             }
-
+            .route::before {
+                content: "";
+                width: 120%;
+                height: 8rem;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: url(media/cot-wave1.svg);
+                background-position-y: top;
+                background-repeat: repeat-x;
+            }
+            .route::after {
+                content: "";
+                width: 120%;
+                height: 8rem;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: url(media/cot-wave2.svg);
+                background-position-y: bottom;
+                background-repeat: repeat-x;
+            }
+            .route>div {
+                positio: relative;
+                z-index: 1;
+            }
             .route .form,
             .route h1 {
                 background-color: var(--white-color-op);

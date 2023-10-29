@@ -318,7 +318,7 @@ module.exports = function ({
                 ? html_rows(default_data)
                 : ""
             )}
-            <div class="item flex-row flex-wrap align-c justify-c">
+            <div class="item flex-row flex-wrap align-s justify-c">
                 ${html_submit()}
                 ${(
                     whatsapp !== undefined
