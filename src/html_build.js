@@ -132,6 +132,7 @@ function html_route({
                 padding: 10px;
                 min-height: 1000px;
                 position: relative;
+                overflow: hidden;
             }
             .route::before {
                 content: "";

@@ -146,6 +146,7 @@
 
 .coberturas .head .img img {
     max-width: 500px;
+    width: 100%;
 }
 
 .coberturas .body {
@@ -222,14 +223,14 @@
     border-right: 8px solid var(--secondary-color);
     outline: 10px solid var(--secondary-color);
     outline-offset: -4px;
+    overflow: hidden;
 }
-.cotiza::after, .cotiza::before {
+
+.cotiza::before {
     content: "";
+    position: absolute;
     width: 120%;
     height: 8rem;
-    position: absolute;
-}
-.cotiza::before {
     top: 0;
     background: url(media/cot-wave1.svg);
     background-position-y: top;
@@ -237,6 +238,10 @@
 }
 
 .cotiza::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 8rem;
     bottom: 0;
     background: url(media/cot-wave2.svg);
     background-position-y: bottom;
